@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Wizards of Thay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .wizard {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .property {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    {% for wizard in wizards %}
+    <div class="wizard">
+        <p class="name">{{ wizard.name }}</p>
+        <p><strong>Medium Humanoid ({{ wizard.race.capitalize() }}), {{ wizard.alignment }}</strong></p>
+        <p><span class="property">Ability Scores:</span></p>
+        <ul>
+            <li>STR: {{ wizard.ability_scores.STR }}</li>
+            <li>DEX: {{ wizard.ability_scores.DEX }}</li>
+            <li>CON: {{ wizard.ability_scores.CON }}</li>
+            <li>INT: {{ wizard.ability_scores.INT }}</li>
+            <li>WIS: {{ wizard.ability_scores.WIS }}</li>
+            <li>CHA: {{ wizard.ability_scores.CHA }}</li>
+        </ul>
+        <p><span class="property">Level:</span> {{ wizard.level }}</p>
+        <p><span class="property">Living Status:</span> {{ wizard.living_status }}</p>
+        {% if wizard.living_status == "living" %}
+        <p><span class="property">Age:</span> {{ wizard.age }}</p>
+        {% endif %}
+        <p><span class="property">School of Magic:</span> {{ wizard.school_of_magic }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>

@@ -21,6 +21,14 @@ schools_of_magic = [
     "Illusion", "Necromancy", "Transmutation"
 ]
 
+def calculate_hit_points(level, con_score):
+    con_modifier = calculate_modifier(con_score)
+    hit_points = (8 + con_modifier) * level
+    return hit_points
+
+def calculate_modifier(score):
+    return (score - 10) // 2
+
 def generate_thayan_name():
     first_name = random.choice(first_names)
     last_name = random.choice(last_names)
@@ -90,6 +98,10 @@ def main(num_wizards, level=None):
             wizard["age"] = generate_age()
         wizard["alignment"] = generate_alignment()
         wizard["ability_scores"] = generate_ability_scores(wizard["level"])
+        dex_modifier = calculate_modifier(wizard["ability_scores"]["DEX"])
+        wizard["armor_class"] = 10 + dex_modifier
+        wizard["con_modifier"] = calculate_modifier(wizard["ability_scores"]["CON"])
+        wizard["hit_points"] = calculate_hit_points(wizard["level"], wizard["ability_scores"]["CON"])
         wizards.append(wizard)
     
     with open("red_wizards.json", "w") as outfile:

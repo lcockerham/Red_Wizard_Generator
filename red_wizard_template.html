@@ -20,6 +20,10 @@
         .property {
             font-weight: bold;
         }
+        .red-line {
+        border-bottom: 2px solid red;
+        margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -28,8 +32,19 @@
         <p class="name">{{ wizard.name }}</p>
         <p>Medium Humanoid ({{ wizard.race }}), {{ wizard.alignment }}</p>
         <p><span class="property">Armor Class:</span> {{ wizard.armor_class }}</p>
-        <p><span class="property">Hit Points:</span> {{ wizard.hit_points }} ({{ wizard.level }}d8 + {{ wizard.level * wizard.con_modifier }})</p>
+        <p><span class="property">Hit Points:</span> {{ wizard.hit_points }} ({{ wizard.level }}d8 + {{ wizard.level * wizard.ability_modifiers.con_modifier }})</p>
+        <p><span class="property">Speed:</span> 30 ft.</p>
         <p><span class="property">Level:</span> {{ wizard.level }}</p>
+        <div class="red-line"></div>
+        <p>
+            <span class="property">STR</span> {{ wizard.ability_scores.STR }}({{ '+' if wizard.ability_modifiers.str_modifier > 0 }}{{ wizard.ability_modifiers.str_modifier }}) |
+            <span class="property">DEX</span> {{ wizard.ability_scores.DEX }}({{ '+' if wizard.ability_modifiers.dex_modifier > 0 }}{{ wizard.ability_modifiers.dex_modifier }}) |
+            <span class="property">CON</span> {{ wizard.ability_scores.CON }}({{ '+' if wizard.ability_modifiers.con_modifier > 0 }}{{ wizard.ability_modifiers.con_modifier }}) |
+            <span class="property">INT</span> {{ wizard.ability_scores.INT }}({{ '+' if wizard.ability_modifiers.int_modifier > 0 }}{{ wizard.ability_modifiers.int_modifier }}) |
+            <span class="property">WIS</span> {{ wizard.ability_scores.WIS }}({{ '+' if wizard.ability_modifiers.wis_modifier > 0 }}{{ wizard.ability_modifiers.wis_modifier }}) |
+            <span class="property">CHA</span> {{ wizard.ability_scores.CHA }}({{ '+' if wizard.ability_modifiers.cha_modifier > 0 }}{{ wizard.ability_modifiers.cha_modifier }})
+        </p>
+
         <p><span class="property">Living Status:</span> {{ wizard.living_status }}</p>
         {% if wizard.living_status == "living" %}
         <p><span class="property">Age:</span> {{ wizard.age }}</p>

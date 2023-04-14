@@ -1,0 +1,271 @@
+[
+  {
+    "name": "Kaelthor Virmaar",
+    "level": 9,
+    "race": "dragonborn",
+    "living_status": "living",
+    "school_of_magic": "Transmutation",
+    "age": 58,
+    "alignment": "Neutral",
+    "ability_scores": {
+      "STR": 13,
+      "DEX": 14,
+      "CON": 12,
+      "WIS": 8,
+      "CHA": 10,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 1,
+      "dex_modifier": 2,
+      "con_modifier": 1,
+      "wis_modifier": -1,
+      "cha_modifier": 0,
+      "int_modifier": 5
+    },
+    "armor_class": 12,
+    "hit_points": 81
+  },
+  {
+    "name": "Kaelthor Uxalim",
+    "level": 5,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Evocation",
+    "age": 81,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 8,
+      "DEX": 10,
+      "CON": 13,
+      "WIS": 12,
+      "CHA": 14,
+      "INT": 18
+    },
+    "ability_modifiers": {
+      "str_modifier": -1,
+      "dex_modifier": 0,
+      "con_modifier": 1,
+      "wis_modifier": 1,
+      "cha_modifier": 2,
+      "int_modifier": 4
+    },
+    "armor_class": 10,
+    "hit_points": 45
+  },
+  {
+    "name": "Baelthar Ristavi",
+    "level": 12,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Transmutation",
+    "age": 67,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 12,
+      "CON": 10,
+      "WIS": 8,
+      "CHA": 13,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 2,
+      "dex_modifier": 1,
+      "con_modifier": 0,
+      "wis_modifier": -1,
+      "cha_modifier": 1,
+      "int_modifier": 5
+    },
+    "armor_class": 11,
+    "hit_points": 96
+  },
+  {
+    "name": "Thalvost Dulgrim",
+    "level": 7,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Transmutation",
+    "age": 27,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 13,
+      "DEX": 14,
+      "CON": 10,
+      "WIS": 8,
+      "CHA": 12,
+      "INT": 18
+    },
+    "ability_modifiers": {
+      "str_modifier": 1,
+      "dex_modifier": 2,
+      "con_modifier": 0,
+      "wis_modifier": -1,
+      "cha_modifier": 1,
+      "int_modifier": 4
+    },
+    "armor_class": 12,
+    "hit_points": 56
+  },
+  {
+    "name": "Xarthis Pyrath",
+    "level": 6,
+    "race": "dragonborn",
+    "living_status": "living",
+    "school_of_magic": "Conjuration",
+    "age": 93,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 8,
+      "WIS": 14,
+      "CHA": 13,
+      "INT": 18
+    },
+    "ability_modifiers": {
+      "str_modifier": 1,
+      "dex_modifier": 0,
+      "con_modifier": -1,
+      "wis_modifier": 2,
+      "cha_modifier": 1,
+      "int_modifier": 4
+    },
+    "armor_class": 10,
+    "hit_points": 42
+  },
+  {
+    "name": "Huzrath Jorvath",
+    "level": 4,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Conjuration",
+    "age": 29,
+    "alignment": "Lawful Neutral",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 8,
+      "CON": 13,
+      "WIS": 10,
+      "CHA": 12,
+      "INT": 18
+    },
+    "ability_modifiers": {
+      "str_modifier": 2,
+      "dex_modifier": -1,
+      "con_modifier": 1,
+      "wis_modifier": 0,
+      "cha_modifier": 1,
+      "int_modifier": 4
+    },
+    "armor_class": 9,
+    "hit_points": 36
+  },
+  {
+    "name": "Freznaar Ghulrim",
+    "level": 10,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Necromancy",
+    "age": 26,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 13,
+      "WIS": 8,
+      "CHA": 12,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 2,
+      "dex_modifier": 0,
+      "con_modifier": 1,
+      "wis_modifier": -1,
+      "cha_modifier": 1,
+      "int_modifier": 5
+    },
+    "armor_class": 10,
+    "hit_points": 90
+  },
+  {
+    "name": "Caldris Yargoth",
+    "level": 7,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Necromancy",
+    "age": 23,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 8,
+      "DEX": 10,
+      "CON": 13,
+      "WIS": 14,
+      "CHA": 12,
+      "INT": 18
+    },
+    "ability_modifiers": {
+      "str_modifier": -1,
+      "dex_modifier": 0,
+      "con_modifier": 1,
+      "wis_modifier": 2,
+      "cha_modifier": 1,
+      "int_modifier": 4
+    },
+    "armor_class": 10,
+    "hit_points": 63
+  },
+  {
+    "name": "Gruvalar Uxalim",
+    "level": 12,
+    "race": "dragonborn",
+    "living_status": "living",
+    "school_of_magic": "Divination",
+    "age": 28,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 12,
+      "CON": 13,
+      "WIS": 10,
+      "CHA": 8,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 2,
+      "dex_modifier": 1,
+      "con_modifier": 1,
+      "wis_modifier": 0,
+      "cha_modifier": -1,
+      "int_modifier": 5
+    },
+    "armor_class": 11,
+    "hit_points": 108
+  },
+  {
+    "name": "Elvarin Drakthor",
+    "level": 11,
+    "race": "human",
+    "living_status": "undead",
+    "school_of_magic": "Conjuration",
+    "alignment": "Neutral Evil",
+    "ability_scores": {
+      "STR": 8,
+      "DEX": 12,
+      "CON": 13,
+      "WIS": 14,
+      "CHA": 10,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": -1,
+      "dex_modifier": 1,
+      "con_modifier": 1,
+      "wis_modifier": 2,
+      "cha_modifier": 0,
+      "int_modifier": 5
+    },
+    "armor_class": 11,
+    "hit_points": 99
+  }
+]

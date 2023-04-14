@@ -88,6 +88,27 @@ def generate_alignment():
     alignment_probabilities = [0.8] + [0.2 / (len(alignments) - 1)] * (len(alignments) - 1)
     return random.choices(alignments, weights=alignment_probabilities)[0]
 
+def calculate_proficiency_bonus(level):
+    if 1 <= level <= 4:
+        return 2
+    elif 5 <= level <= 8:
+        return 3
+    elif 9 <= level <= 12:
+        return 4
+    elif 13 <= level <= 16:
+        return 5
+    elif 17 <= level <= 20:
+        return 6
+    else:
+        raise ValueError("Invalid character level")
+    
+def calculate_wizard_saving_throws(level, ability_modifiers):
+    proficiency_bonus = calculate_proficiency_bonus(level)
+    
+    int_save = proficiency_bonus + ability_modifiers["int_modifier"]
+    wis_save = proficiency_bonus + ability_modifiers["wis_modifier"]
+
+    return {"INT": int_save, "WIS": wis_save}
 
 
 
@@ -110,6 +131,8 @@ def main(num_wizards, level=None):
         wizard["ability_modifiers"] = generate_ability_modifiers(wizard["ability_scores"])
         wizard["armor_class"] = 10 + wizard["ability_modifiers"]["dex_modifier"]
         wizard["hit_points"] = calculate_hit_points(wizard["level"], wizard["ability_scores"]["CON"])
+        wizard["proficiency_bonus"] = calculate_proficiency_bonus(wizard["level"])
+        wizard["saving_throws"] = calculate_wizard_saving_throws(wizard["level"], wizard["ability_modifiers"])
         wizards.append(wizard)
 
    

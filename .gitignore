@@ -1,0 +1,27 @@
+# .gitignore
+
+# Ignore the generated HTML file
+red_wizards.html
+
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Cache and logs
+*.log
+*.cache
+
+# Other files
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Directories
+.vscode/
+.idea/
+*.egg-info/
+dist/
+build/

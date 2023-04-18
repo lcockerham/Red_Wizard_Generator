@@ -110,6 +110,36 @@ def calculate_wizard_saving_throws(level, ability_modifiers):
 
     return {"INT": int_save, "WIS": wis_save}
 
+def calculate_skill_bonus(level, skill, ability_modifiers, proficient):
+    skills_5e = {
+        "Acrobatics": "DEX",
+        "Animal Handling": "WIS",
+        "Arcana": "INT",
+        "Athletics": "STR",
+        "Deception": "CHA",
+        "History": "INT",
+        "Insight": "WIS",
+        "Intimidation": "CHA",
+        "Investigation": "INT",
+        "Medicine": "WIS",
+        "Nature": "INT",
+        "Perception": "WIS",
+        "Performance": "CHA",
+        "Persuasion": "CHA",
+        "Religion": "INT",
+        "Sleight of Hand": "DEX",
+        "Stealth": "DEX",
+        "Survival": "WIS"
+    }
+    ability = skills_5e[skill]
+    ability_modifier = ability_modifiers[f"{ability.lower()}_modifier"]
+
+    if proficient:
+        proficiency_bonus = calculate_proficiency_bonus(level)
+        return ability_modifier + proficiency_bonus
+    else:
+        return ability_modifier
+
 
 
 def main(num_wizards, level=None):
@@ -133,7 +163,17 @@ def main(num_wizards, level=None):
         wizard["hit_points"] = calculate_hit_points(wizard["level"], wizard["ability_scores"]["CON"])
         wizard["proficiency_bonus"] = calculate_proficiency_bonus(wizard["level"])
         wizard["saving_throws"] = calculate_wizard_saving_throws(wizard["level"], wizard["ability_modifiers"])
+        
+         # Add skill bonuses
+        wizard["skills"] = {
+            "Arcana": calculate_skill_bonus(wizard["level"], "Arcana", wizard["ability_modifiers"], True),
+            "Deception": calculate_skill_bonus(wizard["level"], "Deception", wizard["ability_modifiers"], True),
+            "Insight": calculate_skill_bonus(wizard["level"], "Insight", wizard["ability_modifiers"], True),
+            "Stealth": calculate_skill_bonus(wizard["level"], "Stealth", wizard["ability_modifiers"], True)
+        }
         wizards.append(wizard)
+
+
 
    
     with open("red_wizards.json", "w") as outfile:

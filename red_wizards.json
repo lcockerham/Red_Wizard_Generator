@@ -1,171 +1,11 @@
 [
   {
-    "name": "Elvarin Lathrane",
-    "level": 14,
-    "race": "human",
-    "living_status": "living",
-    "school_of_magic": "Abjuration",
-    "age": 59,
-    "alignment": "Lawful Evil",
-    "ability_scores": {
-      "STR": 14,
-      "DEX": 8,
-      "CON": 13,
-      "WIS": 10,
-      "CHA": 12,
-      "INT": 20
-    },
-    "ability_modifiers": {
-      "str_modifier": 2,
-      "dex_modifier": -1,
-      "con_modifier": 1,
-      "wis_modifier": 0,
-      "cha_modifier": 1,
-      "int_modifier": 5
-    },
-    "armor_class": 9,
-    "hit_points": 126,
-    "proficiency_bonus": 5,
-    "saving_throws": {
-      "INT": 10,
-      "WIS": 5
-    }
-  },
-  {
-    "name": "Jyvareth Virmaar",
+    "name": "Kaelthor Voskhar",
     "level": 10,
     "race": "human",
     "living_status": "living",
-    "school_of_magic": "Illusion",
-    "age": 59,
-    "alignment": "Lawful Evil",
-    "ability_scores": {
-      "STR": 14,
-      "DEX": 8,
-      "CON": 10,
-      "WIS": 12,
-      "CHA": 13,
-      "INT": 20
-    },
-    "ability_modifiers": {
-      "str_modifier": 2,
-      "dex_modifier": -1,
-      "con_modifier": 0,
-      "wis_modifier": 1,
-      "cha_modifier": 1,
-      "int_modifier": 5
-    },
-    "armor_class": 9,
-    "hit_points": 80,
-    "proficiency_bonus": 4,
-    "saving_throws": {
-      "INT": 9,
-      "WIS": 5
-    }
-  },
-  {
-    "name": "Jyvareth Orthal",
-    "level": 11,
-    "race": "tiefling",
-    "living_status": "living",
-    "school_of_magic": "Evocation",
-    "age": 43,
-    "alignment": "Lawful Evil",
-    "ability_scores": {
-      "STR": 14,
-      "DEX": 12,
-      "CON": 8,
-      "WIS": 10,
-      "CHA": 13,
-      "INT": 20
-    },
-    "ability_modifiers": {
-      "str_modifier": 2,
-      "dex_modifier": 1,
-      "con_modifier": -1,
-      "wis_modifier": 0,
-      "cha_modifier": 1,
-      "int_modifier": 5
-    },
-    "armor_class": 11,
-    "hit_points": 77,
-    "proficiency_bonus": 4,
-    "saving_throws": {
-      "INT": 9,
-      "WIS": 4
-    }
-  },
-  {
-    "name": "Azryth Voskhar",
-    "level": 12,
-    "race": "dragonborn",
-    "living_status": "living",
-    "school_of_magic": "Abjuration",
-    "age": 86,
-    "alignment": "Neutral",
-    "ability_scores": {
-      "STR": 8,
-      "DEX": 13,
-      "CON": 10,
-      "WIS": 12,
-      "CHA": 14,
-      "INT": 20
-    },
-    "ability_modifiers": {
-      "str_modifier": -1,
-      "dex_modifier": 1,
-      "con_modifier": 0,
-      "wis_modifier": 1,
-      "cha_modifier": 2,
-      "int_modifier": 5
-    },
-    "armor_class": 11,
-    "hit_points": 96,
-    "proficiency_bonus": 4,
-    "saving_throws": {
-      "INT": 9,
-      "WIS": 5
-    }
-  },
-  {
-    "name": "Izrelia Drakthor",
-    "level": 8,
-    "race": "human",
-    "living_status": "living",
-    "school_of_magic": "Conjuration",
-    "age": 41,
-    "alignment": "Lawful Evil",
-    "ability_scores": {
-      "STR": 14,
-      "DEX": 13,
-      "CON": 8,
-      "WIS": 10,
-      "CHA": 12,
-      "INT": 20
-    },
-    "ability_modifiers": {
-      "str_modifier": 2,
-      "dex_modifier": 1,
-      "con_modifier": -1,
-      "wis_modifier": 0,
-      "cha_modifier": 1,
-      "int_modifier": 5
-    },
-    "armor_class": 11,
-    "hit_points": 56,
-    "proficiency_bonus": 3,
-    "saving_throws": {
-      "INT": 8,
-      "WIS": 3
-    }
-  },
-  {
-    "name": "Azryth Xantos",
-    "level": 8,
-    "race": "human",
-    "living_status": "living",
     "school_of_magic": "Transmutation",
-    "age": 87,
+    "age": 72,
     "alignment": "Lawful Evil",
     "ability_scores": {
       "STR": 10,
@@ -184,25 +24,30 @@
       "int_modifier": 5
     },
     "armor_class": 11,
-    "hit_points": 56,
-    "proficiency_bonus": 3,
+    "hit_points": 70,
+    "proficiency_bonus": 4,
     "saving_throws": {
-      "INT": 8,
-      "WIS": 5
+      "INT": 9,
+      "WIS": 6
+    },
+    "skills": {
+      "Arcana": 9,
+      "Deception": 5,
+      "Insight": 6,
+      "Stealth": 5
     }
   },
   {
-    "name": "Thalvost Xantos",
-    "level": 12,
-    "race": "human",
-    "living_status": "living",
-    "school_of_magic": "Conjuration",
-    "age": 47,
+    "name": "Kaelthor Pyrath",
+    "level": 11,
+    "race": "elf",
+    "living_status": "undead",
+    "school_of_magic": "Evocation",
     "alignment": "Lawful Evil",
     "ability_scores": {
       "STR": 8,
-      "DEX": 12,
-      "CON": 13,
+      "DEX": 13,
+      "CON": 12,
       "WIS": 14,
       "CHA": 10,
       "INT": 20
@@ -216,107 +61,319 @@
       "int_modifier": 5
     },
     "armor_class": 11,
-    "hit_points": 108,
+    "hit_points": 99,
     "proficiency_bonus": 4,
     "saving_throws": {
       "INT": 9,
       "WIS": 6
+    },
+    "skills": {
+      "Arcana": 9,
+      "Deception": 4,
+      "Insight": 6,
+      "Stealth": 5
     }
   },
   {
-    "name": "Huzrath Drakthor",
-    "level": 8,
+    "name": "Jyvareth Korthal",
+    "level": 3,
     "race": "human",
     "living_status": "living",
-    "school_of_magic": "Conjuration",
-    "age": 67,
+    "school_of_magic": "Abjuration",
+    "age": 24,
     "alignment": "Lawful Evil",
     "ability_scores": {
-      "STR": 14,
+      "STR": 12,
       "DEX": 10,
-      "CON": 13,
-      "WIS": 12,
-      "CHA": 8,
-      "INT": 20
-    },
-    "ability_modifiers": {
-      "str_modifier": 2,
-      "dex_modifier": 0,
-      "con_modifier": 1,
-      "wis_modifier": 1,
-      "cha_modifier": -1,
-      "int_modifier": 5
-    },
-    "armor_class": 10,
-    "hit_points": 72,
-    "proficiency_bonus": 3,
-    "saving_throws": {
-      "INT": 8,
-      "WIS": 4
-    }
-  },
-  {
-    "name": "Qorikar Zurnath",
-    "level": 9,
-    "race": "human",
-    "living_status": "living",
-    "school_of_magic": "Divination",
-    "age": 21,
-    "alignment": "Chaotic Evil",
-    "ability_scores": {
-      "STR": 13,
-      "DEX": 10,
-      "CON": 12,
-      "WIS": 14,
-      "CHA": 8,
-      "INT": 20
+      "CON": 14,
+      "WIS": 8,
+      "CHA": 13,
+      "INT": 17
     },
     "ability_modifiers": {
       "str_modifier": 1,
       "dex_modifier": 0,
-      "con_modifier": 1,
-      "wis_modifier": 2,
-      "cha_modifier": -1,
-      "int_modifier": 5
+      "con_modifier": 2,
+      "wis_modifier": -1,
+      "cha_modifier": 1,
+      "int_modifier": 3
     },
     "armor_class": 10,
-    "hit_points": 81,
-    "proficiency_bonus": 4,
+    "hit_points": 30,
+    "proficiency_bonus": 2,
     "saving_throws": {
-      "INT": 9,
-      "WIS": 6
+      "INT": 5,
+      "WIS": 1
+    },
+    "skills": {
+      "Arcana": 5,
+      "Deception": 3,
+      "Insight": 1,
+      "Stealth": 2
     }
   },
   {
-    "name": "Huzrath Ghulrim",
-    "level": 9,
-    "race": "human",
+    "name": "Avaris Jorvath",
+    "level": 7,
+    "race": "dragonborn",
     "living_status": "living",
-    "school_of_magic": "Enchantment",
-    "age": 79,
+    "school_of_magic": "Necromancy",
+    "age": 23,
     "alignment": "Lawful Evil",
     "ability_scores": {
-      "STR": 12,
+      "STR": 13,
+      "DEX": 14,
+      "CON": 12,
+      "WIS": 8,
+      "CHA": 10,
+      "INT": 18
+    },
+    "ability_modifiers": {
+      "str_modifier": 1,
+      "dex_modifier": 2,
+      "con_modifier": 1,
+      "wis_modifier": -1,
+      "cha_modifier": 0,
+      "int_modifier": 4
+    },
+    "armor_class": 12,
+    "hit_points": 63,
+    "proficiency_bonus": 3,
+    "saving_throws": {
+      "INT": 7,
+      "WIS": 2
+    },
+    "skills": {
+      "Arcana": 7,
+      "Deception": 3,
+      "Insight": 2,
+      "Stealth": 5
+    }
+  },
+  {
+    "name": "Qorikar Uxalim",
+    "level": 14,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Abjuration",
+    "age": 25,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 13,
       "DEX": 8,
-      "CON": 10,
-      "WIS": 13,
+      "CON": 12,
+      "WIS": 10,
       "CHA": 14,
       "INT": 20
     },
     "ability_modifiers": {
       "str_modifier": 1,
       "dex_modifier": -1,
-      "con_modifier": 0,
-      "wis_modifier": 1,
+      "con_modifier": 1,
+      "wis_modifier": 0,
       "cha_modifier": 2,
       "int_modifier": 5
     },
     "armor_class": 9,
+    "hit_points": 126,
+    "proficiency_bonus": 5,
+    "saving_throws": {
+      "INT": 10,
+      "WIS": 5
+    },
+    "skills": {
+      "Arcana": 10,
+      "Deception": 7,
+      "Insight": 5,
+      "Stealth": 4
+    }
+  },
+  {
+    "name": "Vezryn Jorvath",
+    "level": 9,
+    "race": "human",
+    "living_status": "undead",
+    "school_of_magic": "Necromancy",
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 8,
+      "DEX": 13,
+      "CON": 10,
+      "WIS": 14,
+      "CHA": 12,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": -1,
+      "dex_modifier": 1,
+      "con_modifier": 0,
+      "wis_modifier": 2,
+      "cha_modifier": 1,
+      "int_modifier": 5
+    },
+    "armor_class": 11,
     "hit_points": 72,
     "proficiency_bonus": 4,
     "saving_throws": {
       "INT": 9,
+      "WIS": 6
+    },
+    "skills": {
+      "Arcana": 9,
+      "Deception": 5,
+      "Insight": 6,
+      "Stealth": 5
+    }
+  },
+  {
+    "name": "Azryth Zurnath",
+    "level": 12,
+    "race": "elf",
+    "living_status": "living",
+    "school_of_magic": "Evocation",
+    "age": 92,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 12,
+      "CON": 10,
+      "WIS": 8,
+      "CHA": 13,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 2,
+      "dex_modifier": 1,
+      "con_modifier": 0,
+      "wis_modifier": -1,
+      "cha_modifier": 1,
+      "int_modifier": 5
+    },
+    "armor_class": 11,
+    "hit_points": 96,
+    "proficiency_bonus": 4,
+    "saving_throws": {
+      "INT": 9,
+      "WIS": 3
+    },
+    "skills": {
+      "Arcana": 9,
+      "Deception": 5,
+      "Insight": 3,
+      "Stealth": 5
+    }
+  },
+  {
+    "name": "Dravikar Orthal",
+    "level": 17,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Transmutation",
+    "age": 29,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 13,
+      "WIS": 14,
+      "CHA": 8,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 0,
+      "dex_modifier": 1,
+      "con_modifier": 1,
+      "wis_modifier": 2,
+      "cha_modifier": -1,
+      "int_modifier": 5
+    },
+    "armor_class": 11,
+    "hit_points": 153,
+    "proficiency_bonus": 6,
+    "saving_throws": {
+      "INT": 11,
+      "WIS": 8
+    },
+    "skills": {
+      "Arcana": 11,
+      "Deception": 5,
+      "Insight": 8,
+      "Stealth": 7
+    }
+  },
+  {
+    "name": "Izrelia Zurnath",
+    "level": 10,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Necromancy",
+    "age": 35,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 12,
+      "WIS": 13,
+      "CHA": 8,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 0,
+      "dex_modifier": 2,
+      "con_modifier": 1,
+      "wis_modifier": 1,
+      "cha_modifier": -1,
+      "int_modifier": 5
+    },
+    "armor_class": 12,
+    "hit_points": 90,
+    "proficiency_bonus": 4,
+    "saving_throws": {
+      "INT": 9,
       "WIS": 5
+    },
+    "skills": {
+      "Arcana": 9,
+      "Deception": 3,
+      "Insight": 5,
+      "Stealth": 6
+    }
+  },
+  {
+    "name": "Qorikar Korthal",
+    "level": 11,
+    "race": "human",
+    "living_status": "undead",
+    "school_of_magic": "Conjuration",
+    "alignment": "Neutral",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 12,
+      "CON": 13,
+      "WIS": 8,
+      "CHA": 10,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 2,
+      "dex_modifier": 1,
+      "con_modifier": 1,
+      "wis_modifier": -1,
+      "cha_modifier": 0,
+      "int_modifier": 5
+    },
+    "armor_class": 11,
+    "hit_points": 99,
+    "proficiency_bonus": 4,
+    "saving_throws": {
+      "INT": 9,
+      "WIS": 3
+    },
+    "skills": {
+      "Arcana": 9,
+      "Deception": 4,
+      "Insight": 3,
+      "Stealth": 5
     }
   }
 ]

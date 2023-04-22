@@ -1,19 +1,21 @@
+"""Module to convert Red Wizards JSON to an HTML file."""
+
 import json
-import os
 from jinja2 import Environment, FileSystemLoader
 
-# Set up Jinja2 template engine
-template_env = Environment(loader=FileSystemLoader(os.path.dirname(os.path.abspath(__file__))))
-template = template_env.get_template("red_wizard_template.html")
+# Load the JSON data
+with open("red_wizards.json", "r", encoding="utf-8") as file:
+    wizards = json.load(file)
 
-# Read the JSON data
-with open("red_wizards.json", "r") as infile:
-    wizards = json.load(infile)
+# Set up the Jinja2 environment
+env = Environment(loader=FileSystemLoader("templates"))
 
-# Render the HTML output
-html_output = template.render(wizards=wizards)
+# Load the template
+template = env.get_template("wizard_template.html")
 
-# Save the generated HTML to a file
-with open("red_wizards.html", "w") as outfile:
-    outfile.write(html_output)
+# Render the template with the wizards data
+html_content = template.render(wizards=wizards)
 
+# Save the rendered HTML to a file
+with open("red_wizards.html", "w", encoding="utf-8") as outfile:
+    outfile.write(html_content)

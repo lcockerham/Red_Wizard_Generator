@@ -1,201 +1,49 @@
 [
   {
-    "name": "Dravikar Lathrane",
-    "level": 12,
-    "race": "human",
+    "name": "Qorikar Ristavi",
+    "level": 5,
+    "race": "halfling",
     "living_status": "living",
-    "school_of_magic": "Illusion",
-    "age": 45,
+    "school_of_magic": "Divination",
+    "age": 57,
     "alignment": "Lawful Evil",
     "ability_scores": {
       "STR": 13,
-      "DEX": 10,
+      "DEX": 14,
       "CON": 12,
-      "WIS": 14,
+      "WIS": 10,
       "CHA": 8,
-      "INT": 20
-    },
-    "ability_modifiers": {
-      "str_modifier": 1,
-      "dex_modifier": 0,
-      "con_modifier": 1,
-      "wis_modifier": 2,
-      "cha_modifier": -1,
-      "int_modifier": 5
-    },
-    "armor_class": 10,
-    "hit_points": 108,
-    "proficiency_bonus": 4,
-    "saving_throws": {
-      "INT": 9,
-      "WIS": 6
-    },
-    "skills": {
-      "Arcana": 9,
-      "Deception": 3,
-      "Insight": 6,
-      "Stealth": 4
-    }
-  },
-  {
-    "name": "Elvarin Lathrane",
-    "level": 6,
-    "race": "orc",
-    "living_status": "living",
-    "school_of_magic": "Illusion",
-    "age": 97,
-    "alignment": "Lawful Evil",
-    "ability_scores": {
-      "STR": 10,
-      "DEX": 8,
-      "CON": 13,
-      "WIS": 14,
-      "CHA": 12,
       "INT": 18
     },
     "ability_modifiers": {
-      "str_modifier": 0,
-      "dex_modifier": -1,
+      "str_modifier": 1,
+      "dex_modifier": 2,
       "con_modifier": 1,
-      "wis_modifier": 2,
-      "cha_modifier": 1,
+      "wis_modifier": 0,
+      "cha_modifier": -1,
       "int_modifier": 4
     },
-    "armor_class": 9,
-    "hit_points": 54,
+    "armor_class": 12,
+    "hit_points": 45,
     "proficiency_bonus": 3,
     "saving_throws": {
       "INT": 7,
-      "WIS": 5
+      "WIS": 3
     },
     "skills": {
       "Arcana": 7,
-      "Deception": 4,
-      "Insight": 5,
-      "Stealth": 2
-    }
-  },
-  {
-    "name": "Vezryn Malzor",
-    "level": 8,
-    "race": "dwarf",
-    "living_status": "living",
-    "school_of_magic": "Necromancy",
-    "age": 35,
-    "alignment": "Lawful Evil",
-    "ability_scores": {
-      "STR": 13,
-      "DEX": 10,
-      "CON": 14,
-      "WIS": 12,
-      "CHA": 8,
-      "INT": 20
-    },
-    "ability_modifiers": {
-      "str_modifier": 1,
-      "dex_modifier": 0,
-      "con_modifier": 2,
-      "wis_modifier": 1,
-      "cha_modifier": -1,
-      "int_modifier": 5
-    },
-    "armor_class": 10,
-    "hit_points": 80,
-    "proficiency_bonus": 3,
-    "saving_throws": {
-      "INT": 8,
-      "WIS": 4
-    },
-    "skills": {
-      "Arcana": 8,
       "Deception": 2,
-      "Insight": 4,
-      "Stealth": 3
+      "Insight": 3,
+      "Stealth": 5
     }
   },
   {
-    "name": "Jyvareth Nythos",
-    "level": 7,
-    "race": "human",
-    "living_status": "living",
-    "school_of_magic": "Abjuration",
-    "age": 61,
-    "alignment": "Lawful Neutral",
-    "ability_scores": {
-      "STR": 10,
-      "DEX": 8,
-      "CON": 12,
-      "WIS": 13,
-      "CHA": 14,
-      "INT": 18
-    },
-    "ability_modifiers": {
-      "str_modifier": 0,
-      "dex_modifier": -1,
-      "con_modifier": 1,
-      "wis_modifier": 1,
-      "cha_modifier": 2,
-      "int_modifier": 4
-    },
-    "armor_class": 9,
-    "hit_points": 63,
-    "proficiency_bonus": 3,
-    "saving_throws": {
-      "INT": 7,
-      "WIS": 4
-    },
-    "skills": {
-      "Arcana": 7,
-      "Deception": 5,
-      "Insight": 4,
-      "Stealth": 2
-    }
-  },
-  {
-    "name": "Vezryn Tharnak",
-    "level": 12,
-    "race": "human",
-    "living_status": "living",
-    "school_of_magic": "Illusion",
-    "age": 54,
-    "alignment": "Lawful Evil",
-    "ability_scores": {
-      "STR": 14,
-      "DEX": 8,
-      "CON": 12,
-      "WIS": 13,
-      "CHA": 10,
-      "INT": 20
-    },
-    "ability_modifiers": {
-      "str_modifier": 2,
-      "dex_modifier": -1,
-      "con_modifier": 1,
-      "wis_modifier": 1,
-      "cha_modifier": 0,
-      "int_modifier": 5
-    },
-    "armor_class": 9,
-    "hit_points": 108,
-    "proficiency_bonus": 4,
-    "saving_throws": {
-      "INT": 9,
-      "WIS": 5
-    },
-    "skills": {
-      "Arcana": 9,
-      "Deception": 4,
-      "Insight": 5,
-      "Stealth": 3
-    }
-  },
-  {
-    "name": "Baelthar Jorvath",
+    "name": "Xarthis Sovreth",
     "level": 8,
     "race": "human",
     "living_status": "living",
     "school_of_magic": "Divination",
-    "age": 32,
+    "age": 71,
     "alignment": "Lawful Evil",
     "ability_scores": {
       "STR": 10,
@@ -228,69 +76,221 @@
     }
   },
   {
-    "name": "Freznaar Drakthor",
-    "level": 12,
+    "name": "Elvarin Ghulrim",
+    "level": 9,
     "race": "human",
     "living_status": "living",
-    "school_of_magic": "Illusion",
-    "age": 50,
-    "alignment": "Lawful Evil",
+    "school_of_magic": "Divination",
+    "age": 75,
+    "alignment": "Chaotic Evil",
     "ability_scores": {
-      "STR": 12,
-      "DEX": 14,
-      "CON": 13,
-      "WIS": 8,
-      "CHA": 10,
+      "STR": 13,
+      "DEX": 12,
+      "CON": 14,
+      "WIS": 10,
+      "CHA": 8,
       "INT": 20
     },
     "ability_modifiers": {
       "str_modifier": 1,
-      "dex_modifier": 2,
-      "con_modifier": 1,
-      "wis_modifier": -1,
-      "cha_modifier": 0,
+      "dex_modifier": 1,
+      "con_modifier": 2,
+      "wis_modifier": 0,
+      "cha_modifier": -1,
       "int_modifier": 5
     },
-    "armor_class": 12,
-    "hit_points": 108,
+    "armor_class": 11,
+    "hit_points": 90,
     "proficiency_bonus": 4,
     "saving_throws": {
       "INT": 9,
-      "WIS": 3
+      "WIS": 4
     },
     "skills": {
       "Arcana": 9,
-      "Deception": 4,
-      "Insight": 3,
-      "Stealth": 6
+      "Deception": 3,
+      "Insight": 4,
+      "Stealth": 5
     }
   },
   {
-    "name": "Xyralen Ghulrim",
-    "level": 12,
-    "race": "elf",
+    "name": "Ysvalda Virmaar",
+    "level": 8,
+    "race": "human",
     "living_status": "living",
-    "school_of_magic": "Enchantment",
-    "age": 81,
+    "school_of_magic": "Transmutation",
+    "age": 90,
     "alignment": "Lawful Evil",
     "ability_scores": {
       "STR": 8,
-      "DEX": 10,
-      "CON": 12,
+      "DEX": 12,
+      "CON": 10,
       "WIS": 14,
       "CHA": 13,
       "INT": 20
     },
     "ability_modifiers": {
       "str_modifier": -1,
-      "dex_modifier": 0,
-      "con_modifier": 1,
+      "dex_modifier": 1,
+      "con_modifier": 0,
       "wis_modifier": 2,
       "cha_modifier": 1,
       "int_modifier": 5
     },
+    "armor_class": 11,
+    "hit_points": 64,
+    "proficiency_bonus": 3,
+    "saving_throws": {
+      "INT": 8,
+      "WIS": 5
+    },
+    "skills": {
+      "Arcana": 8,
+      "Deception": 4,
+      "Insight": 5,
+      "Stealth": 4
+    }
+  },
+  {
+    "name": "Huzrath Dulgrim",
+    "level": 13,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Evocation",
+    "age": 45,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 10,
+      "DEX": 8,
+      "CON": 14,
+      "WIS": 13,
+      "CHA": 12,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 0,
+      "dex_modifier": -1,
+      "con_modifier": 2,
+      "wis_modifier": 1,
+      "cha_modifier": 1,
+      "int_modifier": 5
+    },
+    "armor_class": 9,
+    "hit_points": 130,
+    "proficiency_bonus": 5,
+    "saving_throws": {
+      "INT": 10,
+      "WIS": 6
+    },
+    "skills": {
+      "Arcana": 10,
+      "Deception": 6,
+      "Insight": 6,
+      "Stealth": 4
+    }
+  },
+  {
+    "name": "Vezryn Yargoth",
+    "level": 8,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Evocation",
+    "age": 34,
+    "alignment": "Lawful Neutral",
+    "ability_scores": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 14,
+      "WIS": 8,
+      "CHA": 12,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 1,
+      "dex_modifier": 0,
+      "con_modifier": 2,
+      "wis_modifier": -1,
+      "cha_modifier": 1,
+      "int_modifier": 5
+    },
     "armor_class": 10,
-    "hit_points": 108,
+    "hit_points": 80,
+    "proficiency_bonus": 3,
+    "saving_throws": {
+      "INT": 8,
+      "WIS": 2
+    },
+    "skills": {
+      "Arcana": 8,
+      "Deception": 4,
+      "Insight": 2,
+      "Stealth": 3
+    }
+  },
+  {
+    "name": "Ysvalda Irthos",
+    "level": 9,
+    "race": "orc",
+    "living_status": "living",
+    "school_of_magic": "Divination",
+    "age": 97,
+    "alignment": "Neutral",
+    "ability_scores": {
+      "STR": 8,
+      "DEX": 10,
+      "CON": 13,
+      "WIS": 12,
+      "CHA": 14,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": -1,
+      "dex_modifier": 0,
+      "con_modifier": 1,
+      "wis_modifier": 1,
+      "cha_modifier": 2,
+      "int_modifier": 5
+    },
+    "armor_class": 10,
+    "hit_points": 81,
+    "proficiency_bonus": 4,
+    "saving_throws": {
+      "INT": 9,
+      "WIS": 5
+    },
+    "skills": {
+      "Arcana": 9,
+      "Deception": 6,
+      "Insight": 5,
+      "Stealth": 4
+    }
+  },
+  {
+    "name": "Vezryn Irthos",
+    "level": 10,
+    "race": "human",
+    "living_status": "living",
+    "school_of_magic": "Necromancy",
+    "age": 84,
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 13,
+      "WIS": 14,
+      "CHA": 8,
+      "INT": 20
+    },
+    "ability_modifiers": {
+      "str_modifier": 1,
+      "dex_modifier": 0,
+      "con_modifier": 1,
+      "wis_modifier": 2,
+      "cha_modifier": -1,
+      "int_modifier": 5
+    },
+    "armor_class": 10,
+    "hit_points": 90,
     "proficiency_bonus": 4,
     "saving_throws": {
       "INT": 9,
@@ -298,84 +298,84 @@
     },
     "skills": {
       "Arcana": 9,
-      "Deception": 5,
+      "Deception": 3,
       "Insight": 6,
       "Stealth": 4
     }
   },
   {
-    "name": "Elvarin Pyrath",
-    "level": 7,
-    "race": "human",
-    "living_status": "undead",
-    "school_of_magic": "Conjuration",
-    "alignment": "Lawful Evil",
-    "ability_scores": {
-      "STR": 14,
-      "DEX": 10,
-      "CON": 8,
-      "WIS": 13,
-      "CHA": 12,
-      "INT": 18
-    },
-    "ability_modifiers": {
-      "str_modifier": 2,
-      "dex_modifier": 0,
-      "con_modifier": -1,
-      "wis_modifier": 1,
-      "cha_modifier": 1,
-      "int_modifier": 4
-    },
-    "armor_class": 10,
-    "hit_points": 49,
-    "proficiency_bonus": 3,
-    "saving_throws": {
-      "INT": 7,
-      "WIS": 4
-    },
-    "skills": {
-      "Arcana": 7,
-      "Deception": 4,
-      "Insight": 4,
-      "Stealth": 3
-    }
-  },
-  {
-    "name": "Ysvalda Pyrath",
-    "level": 9,
-    "race": "human",
+    "name": "Avaris Irthos",
+    "level": 18,
+    "race": "halfling",
     "living_status": "living",
-    "school_of_magic": "Enchantment",
-    "age": 26,
+    "school_of_magic": "Conjuration",
+    "age": 44,
     "alignment": "Lawful Evil",
     "ability_scores": {
-      "STR": 13,
-      "DEX": 14,
-      "CON": 8,
-      "WIS": 10,
+      "STR": 10,
+      "DEX": 8,
+      "CON": 14,
+      "WIS": 13,
       "CHA": 12,
       "INT": 20
     },
     "ability_modifiers": {
-      "str_modifier": 1,
-      "dex_modifier": 2,
-      "con_modifier": -1,
-      "wis_modifier": 0,
+      "str_modifier": 0,
+      "dex_modifier": -1,
+      "con_modifier": 2,
+      "wis_modifier": 1,
       "cha_modifier": 1,
       "int_modifier": 5
     },
-    "armor_class": 12,
-    "hit_points": 63,
-    "proficiency_bonus": 4,
+    "armor_class": 9,
+    "hit_points": 180,
+    "proficiency_bonus": 6,
     "saving_throws": {
-      "INT": 9,
+      "INT": 11,
+      "WIS": 7
+    },
+    "skills": {
+      "Arcana": 11,
+      "Deception": 7,
+      "Insight": 7,
+      "Stealth": 5
+    }
+  },
+  {
+    "name": "Nythilis Xantos",
+    "level": 2,
+    "race": "human",
+    "living_status": "undead",
+    "school_of_magic": "Evocation",
+    "alignment": "Lawful Evil",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 8,
+      "WIS": 14,
+      "CHA": 13,
+      "INT": 17
+    },
+    "ability_modifiers": {
+      "str_modifier": 1,
+      "dex_modifier": 0,
+      "con_modifier": -1,
+      "wis_modifier": 2,
+      "cha_modifier": 1,
+      "int_modifier": 3
+    },
+    "armor_class": 10,
+    "hit_points": 14,
+    "proficiency_bonus": 2,
+    "saving_throws": {
+      "INT": 5,
       "WIS": 4
     },
     "skills": {
-      "Arcana": 9,
-      "Deception": 5,
+      "Arcana": 5,
+      "Deception": 3,
       "Insight": 4,
-      "Stealth": 6
+      "Stealth": 2
     }
   }
 ]

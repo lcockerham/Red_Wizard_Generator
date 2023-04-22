@@ -8,13 +8,13 @@ if __name__ == "__main__":
         print("Usage: python run_wizard_and_html.py <num_wizards> [level]")
         sys.exit(1)
 
-    num_wizards = sys.argv[1]
-    level = sys.argv[2] if len(sys.argv) >= 3 else None
+    num_wizards_arg = sys.argv[1]
+    level_arg = sys.argv[2] if len(sys.argv) >= 3 else None
 
-    if level:
-        generator_command = f"python red_wizard_generator.py {num_wizards} {level}"
+    if level_arg:
+        generator_command = f"python red_wizard_generator.py {num_wizards_arg} {level_arg}"
     else:
-        generator_command = f"python red_wizard_generator.py {num_wizards}"
+        generator_command = f"python red_wizard_generator.py {num_wizards_arg}"
 
     print("Running Red_Wizard_Generator...")
     subprocess.run(generator_command, shell=True, check=True)

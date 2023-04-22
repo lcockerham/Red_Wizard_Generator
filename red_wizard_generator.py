@@ -169,8 +169,11 @@ def main(num_wizards, level=None):
             "Arcana": calculate_skill_bonus(wizard["level"], "Arcana", wizard["ability_modifiers"], True),
             "Deception": calculate_skill_bonus(wizard["level"], "Deception", wizard["ability_modifiers"], True),
             "Insight": calculate_skill_bonus(wizard["level"], "Insight", wizard["ability_modifiers"], True),
-            "Stealth": calculate_skill_bonus(wizard["level"], "Stealth", wizard["ability_modifiers"], True)
+            "Stealth": calculate_skill_bonus(wizard["level"], "Stealth", wizard["ability_modifiers"], True),
+            "Passive_Perception": 10 + calculate_skill_bonus(wizard["level"], "Perception", wizard["ability_modifiers"], False)
         }
+
+
         wizards.append(wizard)
 
 

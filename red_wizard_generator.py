@@ -52,7 +52,6 @@ def generate_ability_modifiers(ability_scores):
     for ability, score in ability_scores.items():
         modifiers[f"{ability.lower()}_modifier"] = calculate_modifier(score)
     return modifiers
-    
 
 def generate_thayan_name():
     first_name = random.choice(first_names)
@@ -104,10 +103,8 @@ def calculate_proficiency_bonus(level):
     
 def calculate_wizard_saving_throws(level, ability_modifiers):
     proficiency_bonus = calculate_proficiency_bonus(level)
-    
     int_save = proficiency_bonus + ability_modifiers["int_modifier"]
     wis_save = proficiency_bonus + ability_modifiers["wis_modifier"]
-
     return {"INT": int_save, "WIS": wis_save}
 
 def calculate_skill_bonus(level, skill, ability_modifiers, proficient):

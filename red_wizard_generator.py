@@ -22,6 +22,13 @@ schools_of_magic = [
 ]
 
 def calculate_hit_points(level, con_score):
+    """
+    Calculate the hit points of a character based on their level and Constitution score.
+
+    :param level: The character's level (integer).
+    :param con_score: The character's Constitution score (integer).
+    :return: The calculated hit points (integer).
+    """
     con_modifier = calculate_modifier(con_score)
     hit_points = (8 + con_modifier) * level
     return hit_points
@@ -30,6 +37,12 @@ def calculate_modifier(score):
     return (score - 10) // 2
 
 def generate_ability_scores(level):
+    """
+    Generate ability scores for a character based on their level using a standard array method.
+
+    :param level: The character's level (integer).
+    :return: A dictionary containing the character's ability scores (integer values) keyed by ability names.
+    """
     standard_array = [17, 14, 13, 12, 10, 8]
     abilities = ["STR", "DEX", "CON", "WIS", "CHA"]
 
@@ -137,9 +150,13 @@ def calculate_skill_bonus(level, skill, ability_modifiers, proficient):
     else:
         return ability_modifier
 
-
-
 def main(num_wizards, level=None):
+    """
+    Generate Red Wizards of Thay with specified parameters and save them to a JSON file.
+
+    :param num_wizards: The number of Red Wizards to generate.
+    :param level: The level of the Red Wizards. If not specified, a random level will be generated for each wizard.
+    """
     wizards = []
     for _ in range(num_wizards):
         wizard = {}
@@ -170,13 +187,9 @@ def main(num_wizards, level=None):
             "Passive_Perception": 10 + calculate_skill_bonus(wizard["level"], "Perception", wizard["ability_modifiers"], False)
         }
 
-
         wizards.append(wizard)
-
-
-
    
-    with open("red_wizards.json", "w") as outfile:
+    with open("red_wizards.json", "w", encoding="utf-8") as outfile:
         json.dump(wizards, outfile, indent=2)
 
 if __name__ == "__main__":

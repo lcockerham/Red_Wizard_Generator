@@ -1,3 +1,29 @@
+"""
+red_wizard_utils.py
+
+This module provides utility functions for generating attributes, stats, and other
+characteristics for Red Wizards in a Dungeons & Dragons campaign.
+
+Functions:
+- calculate_hit_points(level, con_score)
+- calculate_modifier(score)
+- generate_ability_scores(level)
+- generate_ability_modifiers(ability_scores)
+- generate_thayan_name()
+- generate_random_level(mean, stddev)
+- generate_school_of_magic()
+- calculate_proficiency_bonus(level)
+- calculate_wizard_saving_throws(level, ability_modifiers)
+- calculate_skill_bonus(level, skill, ability_modifiers, proficient)
+- generate_living_status()
+- generate_age()
+- generate_race()
+- generate_alignment()
+
+The functions in this module are meant to be used in conjunction with the
+red_wizard_generator.py script for generating complete Red Wizard characters.
+"""
+
 import random
 
 first_names = [

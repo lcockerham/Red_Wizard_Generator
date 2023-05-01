@@ -20,7 +20,6 @@ Example usage:
     # Generate 5 Red Wizards with levels between 5 and 15
     wizards = generate_red_wizards(5, (5, 15))
 """
-import random
 import argparse
 import json
 import red_wizards_utils
@@ -48,11 +47,13 @@ def main(num_wizards, level=None):
             wizard["age"] = red_wizards_utils.generate_age()
         wizard["alignment"] = red_wizards_utils.generate_alignment()
         wizard["ability_scores"] = red_wizards_utils.generate_ability_scores(wizard["level"])
-        wizard["ability_modifiers"] = red_wizards_utils.generate_ability_modifiers(wizard["ability_scores"])
+        wizard["ability_modifiers"] = red_wizards_utils.generate_ability_modifiers(
+            wizard["ability_scores"])
         wizard["armor_class"] = 10 + wizard["ability_modifiers"]["dex_modifier"]
         wizard["hit_points"] = red_wizards_utils.calculate_hit_points(
             wizard["level"], wizard["ability_scores"]["CON"])
-        wizard["proficiency_bonus"] = red_wizards_utils.calculate_proficiency_bonus(wizard["level"])
+        wizard["proficiency_bonus"] = red_wizards_utils.calculate_proficiency_bonus(
+            wizard["level"])
         wizard["saving_throws"] = red_wizards_utils.calculate_wizard_saving_throws(
             wizard["level"], wizard["ability_modifiers"])
 

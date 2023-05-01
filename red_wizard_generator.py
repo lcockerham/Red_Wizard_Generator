@@ -1,3 +1,24 @@
+"""
+red_wizard_generator.py
+
+This module provides functionality to generate Red Wizards of Thay, a group of powerful
+spellcasters in the Dungeons & Dragons universe. The module includes functions for generating
+random ability scores, character levels, skill bonuses, saving throws, and other attributes
+specific to Red Wizards.
+
+The main function, `generate_red_wizards`, takes the number of wizards to generate and an optional
+level range as input, and returns a list of dictionaries containing the generated wizards' attributes.
+
+Example usage:
+
+    from red_wizard_generator import generate_red_wizards
+
+    # Generate 10 random Red Wizards
+    wizards = generate_red_wizards(10)
+
+    # Generate 5 Red Wizards with levels between 5 and 15
+    wizards = generate_red_wizards(5, (5, 15))
+"""
 import random
 import argparse
 import json
@@ -34,6 +55,26 @@ def calculate_hit_points(level, con_score):
     return hit_points
 
 def calculate_modifier(score):
+    """
+    Calculate the ability modifier for a given ability score.
+
+    The ability modifier represents how a character's ability score affects various
+    in-game mechanics, such as skill checks, saving throws, and attack rolls.
+    The modifier is determined by subtracting 10 from the ability score and dividing
+    the result by 2, rounded down.
+
+    Args:
+        score (int): The ability score for which to calculate the modifier.
+
+    Returns:
+        int: The calculated ability modifier for the given ability score.
+
+    Example:
+        >>> calculate_modifier(18)
+        4
+        >>> calculate_modifier(8)
+        -1
+    """
     return (score - 10) // 2
 
 def generate_ability_scores(level):
@@ -88,10 +129,42 @@ def generate_thayan_name():
     return f"{first_name} {last_name}"
 
 def generate_living_status():
+    """
+    Randomly generate the living status of a Red Wizard.
+
+    This function randomly determines if a Red Wizard is alive or dead.
+    The living status can be useful in storytelling, role-playing scenarios,
+    or other situations where the current state of the character is important.
+
+    Returns:
+        str: The generated living status of the Red Wizard, either 'Alive' or 'Dead'.
+
+    Example:
+        >>> generate_living_status()
+        'Alive'
+        >>> generate_living_status()
+        'Dead'
+    """
     undead_chance = 0.2
     return "undead" if random.random() < undead_chance else "living"
 
 def generate_age():
+    """
+    Randomly generate the age of a Red Wizard.
+
+    This function generates the age of a Red Wizard using a normal distribution.
+    The generated age can be useful in storytelling, role-playing scenarios,
+    or other situations where the character's age plays a role in the narrative.
+
+    Returns:
+        int: The generated age of the Red Wizard.
+
+    Example:
+        >>> generate_age()
+        73
+        >>> generate_age()
+        58
+    """
     age_distribution = [21] * 5 + list(range(22, 65)) * 2 + list(range(65, 101))
     return random.choice(age_distribution)
 
@@ -106,7 +179,7 @@ def generate_random_level(mean=10, stddev=3):
         defaults to 3
     :type stddev: int, optional
     :return: An integer representing the randomly generated character level, ranging from 1 to 20
-    """    
+    """
     generated_level = int(random.gauss(mean, stddev))
     return max(1, min(20, generated_level))
 
@@ -119,6 +192,23 @@ def generate_school_of_magic():
     return random.choice(schools_of_magic)
 
 def generate_race():
+    """
+    Randomly select the race of a Red Wizard.
+
+    This function chooses a race for a Red Wizard character based on a predefined
+    list of possible races. The race can be useful in storytelling, role-playing
+    scenarios, or other situations where a character's race plays a role in the
+    narrative.
+
+    Returns:
+        str: The selected race for the Red Wizard.
+
+    Example:
+        >>> generate_race()
+        'Human'
+        >>> generate_race()
+        'Tiefling'
+    """
     races = [
         "human", "dragonborn", "dwarf", "elf", "halfling", "orc", "tiefling"
     ]
@@ -126,6 +216,23 @@ def generate_race():
     return random.choices(races, weights=race_probabilities)[0]
 
 def generate_alignment():
+    """
+    Randomly select the alignment of a Red Wizard.
+
+    This function chooses an alignment for a Red Wizard character based on a predefined
+    list of possible alignments. The alignment can be useful in storytelling, role-playing
+    scenarios, or other situations where a character's moral and ethical stance plays a
+    role in the narrative.
+
+    Returns:
+        str: The selected alignment for the Red Wizard.
+
+    Example:
+        >>> generate_alignment()
+        'Lawful Evil'
+        >>> generate_alignment()
+        'Neutral Evil'
+    """
     alignments = [
         "Lawful Evil", "Lawful Neutral", "Neutral", "Neutral Evil", "Chaotic Evil"
     ]
@@ -225,7 +332,7 @@ def main(num_wizards, level=None):
         if level is None:
             wizard["level"] = generate_random_level()
         else:
-            wizard["level"] = level      
+            wizard["level"] = level 
         wizard["race"] = generate_race()
         wizard["living_status"] = generate_living_status()
         wizard["school_of_magic"] = generate_school_of_magic()
@@ -256,7 +363,7 @@ def main(num_wizards, level=None):
         }
 
         wizards.append(wizard)
-   
+
     with open("red_wizards.json", "w", encoding="utf-8") as outfile:
         json.dump(wizards, outfile, indent=2)
 

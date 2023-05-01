@@ -41,7 +41,8 @@ def generate_ability_scores(level):
     Generate ability scores for a character based on their level using a standard array method.
 
     :param level: The character's level (integer).
-    :return: A dictionary containing the character's ability scores (integer values) keyed by ability names.
+    :return: A dictionary containing the character's ability scores (integer values) keyed by 
+    ability names.
     """
     standard_array = [17, 14, 13, 12, 10, 8]
     abilities = ["STR", "DEX", "CON", "WIS", "CHA"]
@@ -61,12 +62,23 @@ def generate_ability_scores(level):
     return scores
 
 def generate_ability_modifiers(ability_scores):
+    """
+    Calculate ability modifiers for a given set of ability scores.
+
+    :param ability_scores: A dictionary containing the ability scores (e.g., {"STR": 10, "DEX": 14, ...})
+    :return: A dictionary containing the ability modifiers (e.g., {"str_modifier": 0, "dex_modifier": 2, ...})
+    """
     modifiers = {}
     for ability, score in ability_scores.items():
         modifiers[f"{ability.lower()}_modifier"] = calculate_modifier(score)
     return modifiers
 
 def generate_thayan_name():
+    """
+    Generate a random Thayan name by combining a random first name and last name from predefined lists.
+
+    :return: A string containing a randomly generated Thayan name (e.g., "Xyralen Drakthor")
+    """
     first_name = random.choice(first_names)
     last_name = random.choice(last_names)
     return f"{first_name} {last_name}"
@@ -80,10 +92,24 @@ def generate_age():
     return random.choice(age_distribution)
 
 def generate_random_level(mean=10, stddev=3):
+    """
+    Generate a random character level based on a Gaussian distribution with a specified mean and standard deviation.
+
+    :param mean: The mean of the Gaussian distribution used to generate the level, defaults to 10
+    :type mean: int, optional
+    :param stddev: The standard deviation of the Gaussian distribution used to generate the level, defaults to 3
+    :type stddev: int, optional
+    :return: An integer representing the randomly generated character level, ranging from 1 to 20
+    """    
     generated_level = int(random.gauss(mean, stddev))
     return max(1, min(20, generated_level))
 
 def generate_school_of_magic():
+    """
+    Randomly select and return a school of magic from the available schools in D&D 5th Edition.
+
+    :return: A string representing the chosen school of magic
+    """
     return random.choice(schools_of_magic)
 
 def generate_race():
@@ -97,10 +123,17 @@ def generate_alignment():
     alignments = [
         "Lawful Evil", "Lawful Neutral", "Neutral", "Neutral Evil", "Chaotic Evil"
     ]
-    alignment_probabilities = [0.8] + [0.2 / (len(alignments) - 1)] * (len(alignments) - 1)
-    return random.choices(alignments, weights=alignment_probabilities)[0]
+    alignment_probability = [0.8] + [0.2 / (len(alignments) - 1)] * (len(alignments) - 1)
+    return random.choices(alignments, weights=alignment_probability)[0]
 
 def calculate_proficiency_bonus(level):
+    """
+    Calculate and return the proficiency bonus for a given character level in D&D 5th Edition.
+
+    :param level: An integer representing the character's level (1-20)
+    :return: An integer representing the proficiency bonus for the given level
+    :raise ValueError: If the level is not within the valid range (1-20)
+    """
     if 1 <= level <= 4:
         return 2
     elif 5 <= level <= 8:
@@ -115,12 +148,30 @@ def calculate_proficiency_bonus(level):
         raise ValueError("Invalid character level")
     
 def calculate_wizard_saving_throws(level, ability_modifiers):
+    """
+    Calculate and return the wizard's saving throw values for each ability based on the character level
+    and ability modifiers in D&D 5th Edition.
+
+    :param level: An integer representing the wizard's level (1-20)
+    :param ability_modifiers: A dictionary containing the wizard's ability modifiers, keyed by ability names
+    :return: A dictionary containing the wizard's saving throw values for each ability, keyed by ability names
+    """
     proficiency_bonus = calculate_proficiency_bonus(level)
     int_save = proficiency_bonus + ability_modifiers["int_modifier"]
     wis_save = proficiency_bonus + ability_modifiers["wis_modifier"]
     return {"INT": int_save, "WIS": wis_save}
 
 def calculate_skill_bonus(level, skill, ability_modifiers, proficient):
+    """
+    Calculate and return the skill bonus for a given skill based on the character level,
+    ability modifiers, and proficiency status in D&D 5th Edition.
+
+    :param level: An integer representing the character's level (1-20)
+    :param skill: A string representing the skill name (e.g., "Acrobatics", "Arcana")
+    :param ability_modifiers: A dictionary containing the character's ability modifiers, keyed by ability names
+    :param proficient: A boolean indicating whether the character is proficient in the skill
+    :return: An integer representing the skill bonus for the given skill
+    """
     skills_5e = {
         "Acrobatics": "DEX",
         "Animal Handling": "WIS",
@@ -155,7 +206,8 @@ def main(num_wizards, level=None):
     Generate Red Wizards of Thay with specified parameters and save them to a JSON file.
 
     :param num_wizards: The number of Red Wizards to generate.
-    :param level: The level of the Red Wizards. If not specified, a random level will be generated for each wizard.
+    :param level: The level of the Red Wizards. If not specified, a random level will be 
+    generated for each wizard.
     """
     wizards = []
     for _ in range(num_wizards):
@@ -176,15 +228,21 @@ def main(num_wizards, level=None):
         wizard["armor_class"] = 10 + wizard["ability_modifiers"]["dex_modifier"]
         wizard["hit_points"] = calculate_hit_points(wizard["level"], wizard["ability_scores"]["CON"])
         wizard["proficiency_bonus"] = calculate_proficiency_bonus(wizard["level"])
-        wizard["saving_throws"] = calculate_wizard_saving_throws(wizard["level"], wizard["ability_modifiers"])
+        wizard["saving_throws"] = calculate_wizard_saving_throws(
+            wizard["level"], wizard["ability_modifiers"])
         
          # Add skill bonuses
         wizard["skills"] = {
-            "Arcana": calculate_skill_bonus(wizard["level"], "Arcana", wizard["ability_modifiers"], True),
-            "Deception": calculate_skill_bonus(wizard["level"], "Deception", wizard["ability_modifiers"], True),
-            "Insight": calculate_skill_bonus(wizard["level"], "Insight", wizard["ability_modifiers"], True),
-            "Stealth": calculate_skill_bonus(wizard["level"], "Stealth", wizard["ability_modifiers"], True),
-            "Passive_Perception": 10 + calculate_skill_bonus(wizard["level"], "Perception", wizard["ability_modifiers"], False)
+            "Arcana": 
+                calculate_skill_bonus(wizard["level"], "Arcana", wizard["ability_modifiers"], True),
+            "Deception": 
+                calculate_skill_bonus(wizard["level"], "Deception", wizard["ability_modifiers"], True),
+            "Insight": 
+                calculate_skill_bonus(wizard["level"], "Insight", wizard["ability_modifiers"], True),
+            "Stealth": 
+                calculate_skill_bonus(wizard["level"], "Stealth", wizard["ability_modifiers"], True),
+            "Passive_Perception": 10 + calculate_skill_bonus(
+                wizard["level"], "Perception", wizard["ability_modifiers"], False)
         }
 
         wizards.append(wizard)
@@ -195,6 +253,7 @@ def main(num_wizards, level=None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate random Red Wizards of Thay.")
     parser.add_argument("num_wizards", type=int, help="Number of Red Wizards to generate")
-    parser.add_argument("level", type=int, choices=range(1, 21), help="Character level (1-20)", nargs='?', default=None)
+    parser.add_argument(
+        "level", type=int, choices=range(1, 21), help="Character level (1-20)", nargs='?', default=None)
     args = parser.parse_args()
     main(args.num_wizards, args.level)

@@ -260,7 +260,7 @@ def calculate_proficiency_bonus(level):
         return 6
 
     raise ValueError("Invalid character level")
-    
+
 def calculate_wizard_saving_throws(level, ability_modifiers):
     """
     Calculate and return the wizard's saving throw values for each ability based 
@@ -349,7 +349,7 @@ def main(num_wizards, level=None):
         wizard["proficiency_bonus"] = calculate_proficiency_bonus(wizard["level"])
         wizard["saving_throws"] = calculate_wizard_saving_throws(
             wizard["level"], wizard["ability_modifiers"])
-        
+
         # Add skill bonuses
         wizard["skills"] = {
             "Arcana": calculate_skill_bonus(

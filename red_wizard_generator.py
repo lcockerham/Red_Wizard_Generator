@@ -260,7 +260,6 @@ def calculate_proficiency_bonus(level):
         return 6
 
     raise ValueError("Invalid character level")
-
     
 def calculate_wizard_saving_throws(level, ability_modifiers):
     """
@@ -335,7 +334,7 @@ def main(num_wizards, level=None):
         if level is None:
             wizard["level"] = generate_random_level()
         else:
-            wizard["level"] = level 
+            wizard["level"] = level
         wizard["race"] = generate_race()
         wizard["living_status"] = generate_living_status()
         wizard["school_of_magic"] = generate_school_of_magic()
@@ -351,7 +350,7 @@ def main(num_wizards, level=None):
         wizard["saving_throws"] = calculate_wizard_saving_throws(
             wizard["level"], wizard["ability_modifiers"])
         
-         # Add skill bonuses
+        # Add skill bonuses
         wizard["skills"] = {
             "Arcana": calculate_skill_bonus(
                 wizard["level"], "Arcana", wizard["ability_modifiers"], True),

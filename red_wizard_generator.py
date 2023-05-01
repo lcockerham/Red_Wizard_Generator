@@ -7,7 +7,8 @@ random ability scores, character levels, skill bonuses, saving throws, and other
 specific to Red Wizards.
 
 The main function, `generate_red_wizards`, takes the number of wizards to generate and an optional
-level range as input, and returns a list of dictionaries containing the generated wizards' attributes.
+level range as input, and returns a list of dictionaries containing the generated wizards' 
+attributes.
 
 Example usage:
 
@@ -249,16 +250,17 @@ def calculate_proficiency_bonus(level):
     """
     if 1 <= level <= 4:
         return 2
-    elif 5 <= level <= 8:
+    if 5 <= level <= 8:
         return 3
-    elif 9 <= level <= 12:
+    if 9 <= level <= 12:
         return 4
-    elif 13 <= level <= 16:
+    if 13 <= level <= 16:
         return 5
-    elif 17 <= level <= 20:
+    if 17 <= level <= 20:
         return 6
-    else:
-        raise ValueError("Invalid character level")
+
+    raise ValueError("Invalid character level")
+
     
 def calculate_wizard_saving_throws(level, ability_modifiers):
     """
@@ -314,8 +316,9 @@ def calculate_skill_bonus(level, skill, ability_modifiers, proficient):
     if proficient:
         proficiency_bonus = calculate_proficiency_bonus(level)
         return ability_modifier + proficiency_bonus
-    else:
-        return ability_modifier
+
+    return ability_modifier
+
 
 def main(num_wizards, level=None):
     """

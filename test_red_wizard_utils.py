@@ -12,7 +12,7 @@ To run the tests, simply execute the following command in the terminal:
     python -m unittest test_red_wizard_utils
 """
 import unittest
-from red_wizards_utils import calculate_hit_points
+from red_wizards_utils import calculate_hit_points, generate_ability_scores
 
 
 class TestCalculateHitPoints(unittest.TestCase):
@@ -67,6 +67,31 @@ class TestCalculateHitPoints(unittest.TestCase):
         expected_hit_points = 240
         self.assertEqual(calculate_hit_points(level, con_score), expected_hit_points)
 
+class TestGenerateAbilityScores(unittest.TestCase):
+    """
+    Test cases for the generate_ability_scores function in the red_wizard_utils module.
+    """
+
+    def test_generate_ability_scores(self):
+        """
+        Test that the ability scores generated are within the expected range.
+        """
+        for level in range(1, 21):
+            ability_scores = generate_ability_scores(level)
+            self.assertIsInstance(ability_scores, dict)
+
+            # Test that all abilities have a score between 8 and 20, inclusive
+            for ability, score in ability_scores.items():
+                self.assertGreaterEqual(score, 3)
+                self.assertLessEqual(score, 20)
+
+            # Test that INT score is updated correctly based on level
+            if level >= 8:
+                self.assertEqual(ability_scores["INT"], 20)
+            elif level >= 4:
+                self.assertEqual(ability_scores["INT"], 18)
+            else:
+                self.assertEqual(ability_scores["INT"], 17)
 
 if __name__ == "__main__":
     unittest.main()

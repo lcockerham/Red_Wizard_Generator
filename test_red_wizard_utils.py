@@ -4,7 +4,7 @@ import os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 import unittest
-from red_wizard_utils import calculate_hit_points
+import red_wizard_utils
 
 
 class TestCalculateHitPoints(unittest.TestCase):

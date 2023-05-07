@@ -331,17 +331,18 @@ def generate_languages():
     languages = ["Common", "Thayan"]
 
     # Additional language options
-    additional_languages = ["Abyssal", "Celestial", "Draconic", "Deep Speech", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Infernal", "Orc", "Primordial", "Sylvan", "Undercommon"]
+    additional_languages = ["Abyssal", "Celestial", "Draconic", "Deep Speech", "Dwarvish", 
+                            "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Infernal", 
+                            "Orc", "Primordial", "Sylvan", "Undercommon"]
 
     # Set Draconic and Infernal as more common
     additional_languages_weights = [4, 4] + [1] * (len(additional_languages) - 2)
 
     # Choose three additional languages
-    chosen_languages = random.choices(additional_languages, weights=additional_languages_weights, k=3)
+    chosen_languages = random.choices(
+        additional_languages, weights=additional_languages_weights, k=3)
 
     # Add the chosen languages to the Red Wizard's languages
     languages.extend(chosen_languages)
 
     return languages
-
-        

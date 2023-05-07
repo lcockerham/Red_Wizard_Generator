@@ -50,12 +50,14 @@
         <p><span class="property">Skills:</span> Arcana +{{ wizard.skills.Arcana }}, Deception +{{ wizard.skills.Deception }}, Insight +{{ wizard.skills.Insight }}, Stealth +{{ wizard.skills.Stealth }}</p>
         <p><span class="property">Senses:</span> Passive Perception {{ wizard.skills.Passive_Perception }}</p>
         <p><strong>Languages:</strong> {% for language in wizard.languages %}{{ language }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
-        <p><strong>Challenge:</strong> TBD (TBD Experience)&emsp;&emsp;<strong>Proficiency Bonus:</strong> +{{ proficiency_bonus }}</p>
+        <p><strong>Challenge:</strong> TBD (TBD Experience)&emsp;&emsp;<strong>Proficiency Bonus:</strong> +{{ wizard.proficiency_bonus }}</p>
+        <div class="red-line"></div>
+        <p>Debugging info</p>
         <p><span class="property">Living Status:</span> {{ wizard.living_status }}</p>
         {% if wizard.living_status == "living" %}
         <p><span class="property">Age:</span> {{ wizard.age }}</p>
         {% endif %}
-        <p><span class="property">School of Magic:</span> {{ wizard.school_of_magic }}</p>
+        <p><span class="property">Arcane Tradition:</span> {{ wizard.arcane_tradition}}</p>
         <p><span class="property">Level:</span> {{ wizard.level }}</p>
     </div>
     {% endfor %}

@@ -42,7 +42,7 @@ def main(num_wizards, level=None):
             wizard["level"] = level
         wizard["race"] = red_wizards_utils.generate_race()
         wizard["living_status"] = red_wizards_utils.generate_living_status()
-        wizard["school_of_magic"] = red_wizards_utils.generate_school_of_magic()
+        wizard["arcane_tradition"] = red_wizards_utils.generate_arcane_tradition()
         if wizard["living_status"] == "living":
             wizard["age"] = red_wizards_utils.generate_age()
         wizard["alignment"] = red_wizards_utils.generate_alignment()

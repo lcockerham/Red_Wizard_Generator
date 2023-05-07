@@ -40,9 +40,15 @@ last_names = [
 
 genders = ["he", "she", "they"]
 
-schools_of_magic = [
+"""schools_of_magic = [
     "Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation",
     "Illusion", "Necromancy", "Transmutation"]
+"""
+
+arcane_traditions = [
+    "Abjurer", "Conjurer", "Diviner", "Enchanter", "Evoker",
+    "Illusionist", "Necromancer", "Transmuter"
+]
 
 def calculate_hit_points(level, con_score):
     """
@@ -185,13 +191,13 @@ def generate_random_level(mean=10, stddev=3):
     generated_level = int(random.gauss(mean, stddev))
     return max(1, min(20, generated_level))
 
-def generate_school_of_magic():
+def generate_arcane_tradition():
     """
     Randomly select and return a school of magic from the available schools in D&D 5th Edition.
 
     :return: A string representing the chosen school of magic
     """
-    return random.choice(schools_of_magic)
+    return random.choice(arcane_traditions)
 
 def generate_race():
     """

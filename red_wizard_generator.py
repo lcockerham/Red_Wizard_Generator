@@ -70,6 +70,7 @@ def main(num_wizards, level=None):
             "Passive_Perception": 10 + red_wizards_utils.calculate_skill_bonus(
                 wizard["level"], "Perception", wizard["ability_modifiers"], False)
         }
+        wizard["languages"] = red_wizards_utils.generate_languages()
 
         wizards.append(wizard)
 

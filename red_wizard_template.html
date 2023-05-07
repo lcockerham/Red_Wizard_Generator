@@ -49,6 +49,7 @@
         <p><span class="property">Saving Throws:</span> INT +{{ wizard.saving_throws.INT }}, WIS +{{ wizard.saving_throws.WIS }}</p>
         <p><span class="property">Skills:</span> Arcana +{{ wizard.skills.Arcana }}, Deception +{{ wizard.skills.Deception }}, Insight +{{ wizard.skills.Insight }}, Stealth +{{ wizard.skills.Stealth }}</p>
         <p><span class="property">Senses:</span> Passive Perception {{ wizard.skills.Passive_Perception }}</p>
+        <p><strong>Languages:</strong> {% for language in wizard.languages %}{{ language }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
         <p><span class="property">Living Status:</span> {{ wizard.living_status }}</p>
         {% if wizard.living_status == "living" %}
         <p><span class="property">Age:</span> {{ wizard.age }}</p>

@@ -318,3 +318,30 @@ def calculate_skill_bonus(level, skill, ability_modifiers, proficient):
         return ability_modifier + proficiency_bonus
 
     return ability_modifier
+
+def generate_languages():
+    """
+    Determine the languages a Red Wizard speaks. All Red Wizards speak Common and Thayan,
+    plus three other languages. Draconic and Infernal are the most common additional languages.
+    
+    Returns:
+        list: A list of strings representing the languages the Red Wizard speaks.
+    """
+    # All Red Wizards speak Common and Thayan
+    languages = ["Common", "Thayan"]
+
+    # Additional language options
+    additional_languages = ["Abyssal", "Celestial", "Draconic", "Deep Speech", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Infernal", "Orc", "Primordial", "Sylvan", "Undercommon"]
+
+    # Set Draconic and Infernal as more common
+    additional_languages_weights = [4, 4] + [1] * (len(additional_languages) - 2)
+
+    # Choose three additional languages
+    chosen_languages = random.choices(additional_languages, weights=additional_languages_weights, k=3)
+
+    # Add the chosen languages to the Red Wizard's languages
+    languages.extend(chosen_languages)
+
+    return languages
+
+        

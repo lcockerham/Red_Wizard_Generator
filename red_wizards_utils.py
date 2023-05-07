@@ -331,8 +331,8 @@ def generate_languages():
     languages = ["Common", "Thayan"]
 
     # Additional language options
-    additional_languages = ["Abyssal", "Celestial", "Draconic", "Deep Speech", "Dwarvish", 
-                            "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Infernal", 
+    additional_languages = ["Abyssal", "Celestial", "Draconic", "Deep Speech", "Dwarvish",
+                            "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Infernal",
                             "Orc", "Primordial", "Sylvan", "Undercommon"]
 
     # Set Draconic and Infernal as more common

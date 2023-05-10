@@ -14,7 +14,6 @@ To run the tests, simply execute the following command in the terminal:
 import unittest
 from red_wizards_utils import calculate_hit_points, generate_ability_scores
 
-
 class TestCalculateHitPoints(unittest.TestCase):
     """
     This class contains test cases for the calculate_hit_points function in the 

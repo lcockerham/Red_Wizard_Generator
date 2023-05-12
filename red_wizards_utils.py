@@ -25,25 +25,27 @@ red_wizard_generator.py script for generating complete Red Wizard characters.
 """
 
 import random
+import json
 
-first_names = [
-    "Xyralen", "Vezryn", "Thalvost", "Qorikar", "Nythilis", "Mirelai", "Kaelthor",
-    "Jyvareth", "Izrelia", "Huzrath", "Gruvalar", "Freznaar", "Elvarin", "Dravikar",
-    "Caldris", "Baelthar", "Azryth", "Avaris", "Ysvalda", "Xarthis"
-]
+with open("values.json") as f:
+    names = json.load(f)
 
-last_names = [
-    "Drakthor", "Voskhar", "Zurnath", "Dulgrim", "Yargoth", "Xantos", "Virmaar",
-    "Uxalim", "Tharnak", "Sovreth", "Ristavi", "Pyrath", "Orthal", "Nythos",
-    "Malzor", "Lathrane", "Korthal", "Jorvath", "Irthos", "Ghulrim"
-]
+first_names = names["first_names"]
+last_names = names["last_names"]
+
+def generate_thayan_name():
+    """
+    Generate a random Thayan name by combining a random first name and last name 
+    from predefined lists.
+
+    :return: A string containing a randomly generated Thayan name 
+        (e.g., "Xyralen Drakthor")
+    """
+    first_name = random.choice(first_names)
+    last_name = random.choice(last_names)
+    return f"{first_name} {last_name}"
 
 genders = ["he", "she", "they"]
-
-"""schools_of_magic = [
-    "Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation",
-    "Illusion", "Necromancy", "Transmutation"]
-"""
 
 arcane_traditions = [
     "Abjurer", "Conjurer", "Diviner", "Enchanter", "Evoker",

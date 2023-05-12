@@ -80,7 +80,9 @@ class TestGenerateAbilityScores(unittest.TestCase):
             self.assertIsInstance(ability_scores, dict)
 
             # Test that all abilities have a score between 8 and 20, inclusive
-            for score in ability_scores.items():
+            for score in ability_scores.values():
+                # Change the type of the score variable to an integer
+                score = int(score)
                 self.assertGreaterEqual(score, 3)
                 self.assertLessEqual(score, 20)
 

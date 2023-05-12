@@ -27,7 +27,7 @@ red_wizard_generator.py script for generating complete Red Wizard characters.
 import random
 import json
 
-with open("names.json", encoding="utf-8") as f:
+with open("values.json", encoding="utf-8") as f:
     names = json.load(f)
 
 

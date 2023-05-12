@@ -27,8 +27,9 @@ red_wizard_generator.py script for generating complete Red Wizard characters.
 import random
 import json
 
-with open("values.json") as f:
+with open("names.json", encoding="utf-8") as f:
     names = json.load(f)
+
 
 first_names = names["first_names"]
 last_names = names["last_names"]
@@ -125,18 +126,6 @@ def generate_ability_modifiers(ability_scores):
     for ability, score in ability_scores.items():
         modifiers[f"{ability.lower()}_modifier"] = calculate_modifier(score)
     return modifiers
-
-def generate_thayan_name():
-    """
-    Generate a random Thayan name by combining a random first name and last name 
-    from predefined lists.
-
-    :return: A string containing a randomly generated Thayan name 
-        (e.g., "Xyralen Drakthor")
-    """
-    first_name = random.choice(first_names)
-    last_name = random.choice(last_names)
-    return f"{first_name} {last_name}"
 
 def generate_living_status():
     """

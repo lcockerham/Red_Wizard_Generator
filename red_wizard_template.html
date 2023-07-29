@@ -29,7 +29,7 @@
 <body>
     {% for wizard in wizards %}
     <div class="wizard">
-        <p class="name">{{ wizard.name }}</p>
+        <h2 class="name">{{ wizard.name }}</h2>
         <p>Medium Humanoid ({{ wizard.race }}), {{ wizard.alignment }}</p>
         <p><span class="property">Armor Class:</span> {{ wizard.armor_class }}</p>
         <p><span class="property">Hit Points:</span> {{ wizard.hit_points }} ({{ wizard.level }}d8 + {{ wizard.level * wizard.ability_modifiers.con_modifier }})</p>
@@ -51,6 +51,13 @@
         <p><span class="property">Senses:</span> Passive Perception {{ wizard.skills.Passive_Perception }}</p>
         <p><strong>Languages:</strong> {% for language in wizard.languages %}{{ language }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
         <p><strong>Challenge:</strong> TBD (TBD Experience)&emsp;&emsp;<strong>Proficiency Bonus:</strong> +{{ wizard.proficiency_bonus }}</p>
+        <div class="red-line"></div>
+        
+        <h2>Actions</h2>
+        <p><b>Multiattack.</b> Multiattack. The Red Wizard makes three Arcane Burst attacks.</p>
+        <p><b>Arcane Burst.</b> Melee or Ranged Spell Attack: +6 to hit, reach 5 ft. or range 120 ft., one target. Hit: 19 (3d10 + 3) psychic damage.</p>
+        <p><b>Spellcasting.</b> The Red Wizard casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC X):</p>
+        
         <div class="red-line"></div>
         <p>Debugging info</p>
         <p><span class="property">Living Status:</span> {{ wizard.living_status }}</p>

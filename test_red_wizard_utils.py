@@ -104,12 +104,12 @@ class TestGenerateSpellSaveDC(unittest.TestCase):
         Test the spell save DC for a low-level wizard with a given proficiency bonus 
         and Intelligence modifier.
         """
-        level = 1  # Wizard of level 1 has a proficiency bonus of +2
+        proficiency_bonus = 2  # Wizard of level 1 has a proficiency bonus of +2
         int_modifier = 3  # Assuming Intelligence modifier is +3
         # 8 (base) + 2 (proficiency bonus) + 3 (Intelligence modifier)
         expected_spell_save_dc = 8 + 2 + 3
 
-        result = generate_spell_save_dc(level, int_modifier)
+        result = generate_spell_save_dc(proficiency_bonus, int_modifier)
         self.assertEqual(result, expected_spell_save_dc)
 
     def test_high_level_wizard(self):
@@ -117,12 +117,12 @@ class TestGenerateSpellSaveDC(unittest.TestCase):
         Test the spell save DC for a high-level wizard with a given proficiency bonus 
         and Intelligence modifier.
         """
-        level = 20  # Wizard of level 20 has a proficiency bonus of +6
+        proficiency_bonus = 6  # Wizard of level 20 has a proficiency bonus of +6
         int_modifier = 5  # Assuming Intelligence modifier is +5
         # 8 (base) + 6 (proficiency bonus) + 5 (Intelligence modifier)
         expected_spell_save_dc = 8 + 6 + 5
 
-        result = generate_spell_save_dc(level, int_modifier)
+        result = generate_spell_save_dc(proficiency_bonus, int_modifier)
         self.assertEqual(result, expected_spell_save_dc)
 
 if __name__ == "__main__":

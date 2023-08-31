@@ -12,7 +12,7 @@ To run the tests, simply execute the following command in the terminal:
     python -m unittest test_red_wizard_utils
 """
 import unittest
-from red_wizards_utils import calculate_hit_points, generate_ability_scores
+from red_wizards_utils import calculate_hit_points, generate_ability_scores, generate_spell_save_dc
 
 class TestCalculateHitPoints(unittest.TestCase):
     """
@@ -101,22 +101,26 @@ class TestGenerateSpellSaveDC(unittest.TestCase):
 
     def test_low_level_wizard(self):
         """
-        Test the spell save DC for a low-level wizard with a given proficiency bonus and Intelligence modifier.
+        Test the spell save DC for a low-level wizard with a given proficiency bonus 
+        and Intelligence modifier.
         """
         level = 1  # Wizard of level 1 has a proficiency bonus of +2
         int_modifier = 3  # Assuming Intelligence modifier is +3
-        expected_spell_save_dc = 8 + 2 + 3  # 8 (base) + 2 (proficiency bonus) + 3 (Intelligence modifier)
-        
+        # 8 (base) + 2 (proficiency bonus) + 3 (Intelligence modifier)
+        expected_spell_save_dc = 8 + 2 + 3
+
         result = generate_spell_save_dc(level, int_modifier)
         self.assertEqual(result, expected_spell_save_dc)
 
     def test_high_level_wizard(self):
         """
-        Test the spell save DC for a high-level wizard with a given proficiency bonus and Intelligence modifier.
+        Test the spell save DC for a high-level wizard with a given proficiency bonus 
+        and Intelligence modifier.
         """
         level = 20  # Wizard of level 20 has a proficiency bonus of +6
         int_modifier = 5  # Assuming Intelligence modifier is +5
-        expected_spell_save_dc = 8 + 6 + 5  # 8 (base) + 6 (proficiency bonus) + 5 (Intelligence modifier)
+        # 8 (base) + 6 (proficiency bonus) + 5 (Intelligence modifier)
+        expected_spell_save_dc = 8 + 6 + 5
 
         result = generate_spell_save_dc(level, int_modifier)
         self.assertEqual(result, expected_spell_save_dc)

@@ -1,0 +1,3 @@
+Paramertarize Arcane Burst damage based on level
+Paramertarize Spell Save DCs based on level and INT
+Add custom spell lists

@@ -56,6 +56,9 @@ def main(num_wizards, level=None):
             wizard["level"])
         wizard["saving_throws"] = red_wizards_utils.calculate_wizard_saving_throws(
             wizard["level"], wizard["ability_modifiers"])
+        wizard["spell_save_dc"] = red_wizards_utils.generate_spell_save_dc(
+            wizard["proficiency_bonus"], wizard["ability_modifiers"]["int_modifier"])
+
 
         # Add skill bonuses
         wizard["skills"] = {

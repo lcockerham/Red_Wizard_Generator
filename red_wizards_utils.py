@@ -275,6 +275,18 @@ def calculate_wizard_saving_throws(level, ability_modifiers):
     wis_save = proficiency_bonus + ability_modifiers["wis_modifier"]
     return {"INT": int_save, "WIS": wis_save}
 
+def generate_spell_save_dc(proficiency_bonus, int_modifier):
+    """
+    Calculate the spell save DC for a wizard character based on proficiency bonus and Intelligence modifier.
+
+    :param proficiency_bonus: The proficiency bonus of the character (integer).
+    :param int_modifier: The Intelligence ability modifier of the character (integer).
+    :return: The calculated spell save DC (integer).
+    """
+    spell_save_dc = 8 + proficiency_bonus + int_modifier
+    return spell_save_dc
+
+
 def calculate_skill_bonus(level, skill, ability_modifiers, proficient):
     """
     Calculate and return the skill bonus for a given skill based on the character level,

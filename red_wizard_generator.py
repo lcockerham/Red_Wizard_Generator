@@ -42,7 +42,7 @@ def main(num_wizards, level=None):
             wizard["level"] = level
         wizard["race"] = red_wizards_utils.generate_race()
         wizard["living_status"] = red_wizards_utils.generate_living_status()
-        wizard["arcane_tradition"] = red_wizards_utils.generate_arcane_tradition()
+        wizard["arcane_tradition"] = "necromancer" #red_wizards_utils.generate_arcane_tradition()"""
         if wizard["living_status"] == "living":
             wizard["age"] = red_wizards_utils.generate_age()
         wizard["alignment"] = red_wizards_utils.generate_alignment()
@@ -58,6 +58,18 @@ def main(num_wizards, level=None):
             wizard["level"], wizard["ability_modifiers"])
         wizard["spell_save_dc"] = red_wizards_utils.generate_spell_save_dc(
             wizard["proficiency_bonus"], wizard["ability_modifiers"]["int_modifier"])
+        wizard["spell_attack_bonus"] = red_wizards_utils.generate_spell_attack_bonus(
+            wizard["proficiency_bonus"], wizard["ability_modifiers"]["int_modifier"])
+        
+        if wizard["level"] <= 4:
+            level_category = "low_level"
+        elif 4 < wizard["level"] <= 13:
+            level_category = "mid_level"
+        else:
+            level_category = "high_level"
+
+        wizard["spell_list"] = red_wizards_utils.get_spell_list(
+            wizard["arcane_tradition"], level_category)
 
 
         # Add skill bonuses

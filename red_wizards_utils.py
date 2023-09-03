@@ -30,6 +30,10 @@ import json
 with open("values.json", encoding="utf-8") as f:
     names = json.load(f)
 
+with open('wizard_spell_lists.json', 'r', encoding="utf-8") as f:
+    wizard_spell_lists = json.load(f)
+
+
 
 first_names = names["first_names"]
 last_names = names["last_names"]
@@ -52,6 +56,9 @@ arcane_traditions = [
     "Abjurer", "Conjurer", "Diviner", "Enchanter", "Evoker",
     "Illusionist", "Necromancer", "Transmuter"
 ]
+
+def get_spell_list(arcane_tradition, level_category):
+    return wizard_spell_lists.get(arcane_tradition, {}).get(level_category, "Default Spell List")
 
 def calculate_hit_points(level, con_score):
     """
@@ -286,6 +293,18 @@ def generate_spell_save_dc(proficiency_bonus, int_modifier):
     """
     spell_save_dc = 8 + proficiency_bonus + int_modifier
     return spell_save_dc
+
+def generate_spell_attack_bonus(proficiency_bonus, int_modifier):
+    """
+    Calculate the spell save DC for a wizard character based on proficiency bonus 
+    and Intelligence modifier.
+
+    :param proficiency_bonus: The proficiency bonus of the character (integer).
+    :param int_modifier: The Intelligence ability modifier of the character (integer).
+    :return: The calculated spell save DC (integer).
+    """
+    spell_attack_bonus = proficiency_bonus + int_modifier
+    return spell_attack_bonus
 
 
 def calculate_skill_bonus(level, skill, ability_modifiers, proficient):

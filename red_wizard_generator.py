@@ -60,7 +60,7 @@ def main(num_wizards, level=None):
             wizard["proficiency_bonus"], wizard["ability_modifiers"]["int_modifier"])
         wizard["spell_attack_bonus"] = red_wizards_utils.generate_spell_attack_bonus(
             wizard["proficiency_bonus"], wizard["ability_modifiers"]["int_modifier"])
-        
+                
         if wizard["level"] <= 4:
             level_category = "low_level"
         elif 4 < wizard["level"] <= 13:

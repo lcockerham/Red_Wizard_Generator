@@ -58,6 +58,20 @@ arcane_traditions = [
 ]
 
 def get_spell_list(arcane_tradition, level_category):
+    """
+    Retrieve the spell list for a wizard based on their arcane tradition and level category.
+
+    This function looks up a spell list from a predefined set of wizard spell lists, 
+    which are categorized by arcane tradition and level of the wizard. 
+    If the arcane tradition or level category is not found, it returns a default spell list.
+
+    :param arcane_tradition: The arcane tradition (string) of the wizard, e.g., 'Necromancer', 
+    'Evoker', etc.
+    :param level_category: The category (string) denoting the level range of the wizard, e.g., 
+    'low_level', 'mid_level', 'high_level'.
+    :return: A list of spells (string or list) available to the wizard based on their arcane
+    tradition and level.
+    """
     return wizard_spell_lists.get(arcane_tradition, {}).get(level_category, "Default Spell List")
 
 def calculate_hit_points(level, con_score):

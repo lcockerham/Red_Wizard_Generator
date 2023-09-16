@@ -156,7 +156,7 @@ class TestWizardSpellJSON(unittest.TestCase):
         for wizard_type, categories in self.data.items():
             self.assertIn("low level", categories)
             self.assertIn("mid level", categories)
-            self.assertIn("high level", categories
+            self.assertIn("high level", categories)
 
 if __name__ == "__main__":
     unittest.main()

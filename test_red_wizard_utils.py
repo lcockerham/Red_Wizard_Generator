@@ -125,5 +125,38 @@ class TestGenerateSpellSaveDC(unittest.TestCase):
         result = generate_spell_save_dc(proficiency_bonus, int_modifier)
         self.assertEqual(result, expected_spell_save_dc)
 
+class TestWizardSpellJSON(unittest.TestCase):
+
+    def setUp(self):
+        self.file_path = "C:\Git\Red_Wizard_Generator\wizard_spell_lists.json"
+        with open(self.file_path, "r") as f:
+            self.data = json.load(f)
+
+    def test_file_exists(self):
+        self.assertTrue(os.path.exists(self.file_path))
+
+    def test_valid_json(self):
+        self.assertIsInstance(self.data, dict)
+
+    def test_spell_structure(self):
+        for wizard_type, spells in self.data.items():
+            self.assertIn("at-will", spells)
+            self.assertIn("1/day each", spells)
+            self.assertIn("2/day each", spells)
+            # Add more structure checks here
+
+    def test_spell_integrity(self):
+        valid_spells = ["spell1", "spell2", "spell3"]  # Replace with actual valid spell names
+        for wizard_type, spells in self.data.items():
+            for spell_list in spells.values():
+                for spell in spell_list:
+                    self.assertIn(spell, valid_spells)
+                    
+    def test_level_categories(self):
+        for wizard_type, categories in self.data.items():
+            self.assertIn("low level", categories)
+            self.assertIn("mid level", categories)
+            self.assertIn("high level", categories
+
 if __name__ == "__main__":
     unittest.main()

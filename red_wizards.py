@@ -12,14 +12,14 @@ if __name__ == "__main__":
     LEVEL_ARG = sys.argv[2] if len(sys.argv) >= 3 else None
 
     if LEVEL_ARG:
-        generator_command = f"python red_wizard_generator.py {NUM_WIZARDS_ARG} {LEVEL_ARG}"
+        generator_command = [sys.executable, "red_wizard_generator.py", NUM_WIZARDS_ARG, LEVEL_ARG]
     else:
-        generator_command = f"python red_wizard_generator.py {NUM_WIZARDS_ARG}"
+        generator_command = [sys.executable, "red_wizard_generator.py", NUM_WIZARDS_ARG]
 
     print("Running Red_Wizard_Generator...")
-    subprocess.run(generator_command, shell=True, check=True)
+    subprocess.run(generator_command, check=True)
 
     print("Running RedWizardToHTML...")
-    subprocess.run("python red_wizard_to_html.py", shell=True, check=True)
+    subprocess.run([sys.executable, "red_wizard_to_html.py"], check=True)
 
     print("Done!")

@@ -11,6 +11,8 @@ and other character-specific traits.
 To run the tests, simply execute the following command in the terminal:
     python -m unittest test_red_wizard_utils
 """
+import json
+import os
 import unittest
 from red_wizards_utils import calculate_hit_points, generate_ability_scores, generate_spell_save_dc
 
@@ -128,8 +130,8 @@ class TestGenerateSpellSaveDC(unittest.TestCase):
 class TestWizardSpellJSON(unittest.TestCase):
 
     def setUp(self):
-        self.file_path = "C:\Git\Red_Wizard_Generator\wizard_spell_lists.json"
-        with open(self.file_path, "r") as f:
+        self.file_path = os.path.join(os.path.dirname(__file__), "wizard_spell_lists.json")
+        with open(self.file_path, "r", encoding="utf-8") as f:
             self.data = json.load(f)
 
     def test_file_exists(self):
@@ -138,25 +140,41 @@ class TestWizardSpellJSON(unittest.TestCase):
     def test_valid_json(self):
         self.assertIsInstance(self.data, dict)
 
-    def test_spell_structure(self):
-        for wizard_type, spells in self.data.items():
-            self.assertIn("at-will", spells)
-            self.assertIn("1/day each", spells)
-            self.assertIn("2/day each", spells)
-            # Add more structure checks here
-
-    def test_spell_integrity(self):
-        valid_spells = ["spell1", "spell2", "spell3"]  # Replace with actual valid spell names
-        for wizard_type, spells in self.data.items():
-            for spell_list in spells.values():
-                for spell in spell_list:
-                    self.assertIn(spell, valid_spells)
-                    
     def test_level_categories(self):
         for wizard_type, categories in self.data.items():
-            self.assertIn("low level", categories)
-            self.assertIn("mid level", categories)
-            self.assertIn("high level", categories)
+            self.assertIn("low_level", categories, f"{wizard_type} missing 'low_level'")
+            self.assertIn("mid_level", categories, f"{wizard_type} missing 'mid_level'")
+            self.assertIn("high_level", categories, f"{wizard_type} missing 'high_level'")
+
+    def test_spell_structure(self):
+        for wizard_type, levels in self.data.items():
+            for level_tier in ("low_level", "mid_level", "high_level"):
+                if level_tier not in levels:
+                    continue
+                spells = levels[level_tier]
+                self.assertIn("at_will", spells, f"{wizard_type}/{level_tier} missing 'at_will'")
+                self.assertIn("1_per_day", spells, f"{wizard_type}/{level_tier} missing '1_per_day'")
+                self.assertIn("2_per_day", spells, f"{wizard_type}/{level_tier} missing '2_per_day'")
+
+    def test_spell_integrity(self):
+        for wizard_type, levels in self.data.items():
+            for level_tier in ("low_level", "mid_level", "high_level"):
+                if level_tier not in levels:
+                    continue
+                for freq_key, spell_list in levels[level_tier].items():
+                    self.assertIsInstance(
+                        spell_list, list,
+                        f"{wizard_type}/{level_tier}/{freq_key} is not a list"
+                    )
+                    for spell in spell_list:
+                        self.assertIsInstance(
+                            spell, str,
+                            f"Spell in {wizard_type}/{level_tier}/{freq_key} is not a string"
+                        )
+                        self.assertTrue(
+                            len(spell) > 0,
+                            f"Empty spell name in {wizard_type}/{level_tier}/{freq_key}"
+                        )
 
 if __name__ == "__main__":
     unittest.main()

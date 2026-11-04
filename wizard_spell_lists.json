@@ -14,23 +14,23 @@
       "at_will": ["dancing lights", "mage hand", "prestidigitation"],
       "2_per_day": ["bestow curse", "dimension door", "mage armor", "web"],
       "1_per_day": ["finger of death"]
+    }
+  },
+  "Conjurer": {
+    "low_level": {
+      "at_will": ["dancing lights", "mage hand", "prestidigitation"],
+      "2_per_day": ["mage armor", "web"],
+      "1_per_day": ["ray of enfeeblement"]
     },
-    "Conjurer": {
-      "low_level": {
-        "at_will": ["dancing lights", "mage hand", "prestidigitation"],
-        "2_per_day": ["mage armor", "web"],
-        "1_per_day": ["ray of enfeeblement"]
-      },
-      "mid_level": {
-        "at_will": ["dancing lights", "mage hand", "prestidigitation"],
-        "2_per_day": ["bestow curse", "dimension door", "mage armor", "web"],
-        "1_per_day": ["vampiric touch"]
-      },
-      "high_level": {
-        "at_will": ["dancing lights", "mage hand", "prestidigitation"],
-        "2_per_day": ["bestow curse", "dimension door", "mage armor", "web"],
-        "1_per_day": ["finger of death"]
-      }
+    "mid_level": {
+      "at_will": ["dancing lights", "mage hand", "prestidigitation"],
+      "2_per_day": ["bestow curse", "dimension door", "mage armor", "web"],
+      "1_per_day": ["vampiric touch"]
+    },
+    "high_level": {
+      "at_will": ["dancing lights", "mage hand", "prestidigitation"],
+      "2_per_day": ["bestow curse", "dimension door", "mage armor", "web"],
+      "1_per_day": ["finger of death"]
     }
   },
   "Diviner": {

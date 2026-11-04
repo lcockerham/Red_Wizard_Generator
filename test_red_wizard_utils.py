@@ -448,6 +448,18 @@ class TestGetSpellList(unittest.TestCase):
         result = get_spell_list("Chronomancer", "low_level")
         self.assertEqual(result, "Default Spell List")
 
+    def test_every_generatable_tradition_has_real_spells(self):
+        """Every tradition the generator can pick must resolve to a real spell list.
+
+        Guards against a tradition being mis-nested in wizard_spell_lists.json
+        (Conjurer once sat inside Abjurer), which silently gave those wizards
+        the "Default Spell List" string instead of spells.
+        """
+        for tradition in TestGenerateArcaneTradition.VALID_TRADITIONS:
+            for level_category in ("low_level", "mid_level", "high_level"):
+                result = get_spell_list(tradition, level_category)
+                self.assertIsInstance(result, dict, f"{tradition}/{level_category}")
+
 
 class TestGenerateRandomLevel(unittest.TestCase):
     """Tests for the generate_random_level function."""

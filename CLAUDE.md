@@ -1,10 +1,16 @@
 # Red Wizard Generator
 
-## Security: read first (added 2026-11-03)
+## Security: read first (added 2026-11-03, updated 2026-11-03)
 
 This repo is **public** (lcockerham/Red_Wizard_Generator).
 
-- **jinja2 is capped below 3.0.** `requirements.txt` has `jinja2>=2.11.3,<3.0`, which holds it on 2.11.3 with 4 moderate CVEs (the 4 open Dependabot alerts). Fix: change it to `jinja2>=3.1.6`, then run `python red_wizard_generator.py 3 && python red_wizard_to_html.py` and check `red_wizards.html` still renders.
-- **Dependabot may already have a PR for this.** Security-update PRs were enabled 2026-11-03. Check `gh pr list` before making the bump by hand.
-- **Workflow actions are outdated.** `run_tests.yml` uses `actions/checkout@v2` / `setup-python@v2`, `pylint.yml` uses `@v3`, and `codeql.yml` uses `codeql-action/*@v2`. Fix: bump each to its latest major version.
-- **CI tests on Python 3.8, which is EOL.** `run_tests.yml` pins 3.8 and the `pylint.yml` matrix includes it. Fix: drop 3.8 and test on supported versions (3.10+).
+Resolved on branch `security/tier0-hardening`:
+
+- **jinja2 pin:** was `jinja2>=2.11.3,<3.0` (4 moderate CVEs). It is now `jinja2>=3.1.6`, and no code or template changes were needed. Don't cap it below 3.x again: 2.11.3 also fails to import on a fresh install because current MarkupSafe removed `soft_unicode`.
+- **Workflow actions:** bumped to `actions/checkout@v4`, `actions/setup-python@v5`, and `github/codeql-action/*@v3`.
+- **EOL Python in CI:** `run_tests.yml` and `pylint.yml` now test on 3.12 and 3.13, with `permissions: contents: read`. CodeQL keeps its job-level `security-events: write`.
+
+Still relevant:
+
+- **Check Dependabot before bumping a dependency by hand.** Security-update PRs were enabled 2026-11-03, so run `gh pr list` first.
+- **After any jinja2 change, check that rendering still works:** run `python red_wizard_generator.py 3 && python red_wizard_to_html.py`, then open `red_wizards.html`. Both output files are gitignored.

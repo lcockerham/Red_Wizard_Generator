@@ -17,8 +17,8 @@ The Red Wizard Generator is a Python script that generates random Red Wizards of
 
 ## Installation
 
-1. Clone the repository:https://github.com/lcockerham/Red_Wizard_Generator
-2. Install the required packages: pip install -r requirements.txt\
+1. Clone the repository: `git clone https://github.com/lcockerham/Red_Wizard_Generator`
+2. Install the required packages: `pip install -r requirements.txt`
 
 
 ## Usage

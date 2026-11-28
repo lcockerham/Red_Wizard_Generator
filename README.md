@@ -3,6 +3,17 @@ Generated with ChatGPT
 
 The Red Wizard Generator is a Python script that generates random Red Wizards of Thay characters, a group of powerful wizards in the Dungeons & Dragons universe. It includes a command line interface for generating wizards, as well as a simple HTML template to display the generated character information.
 
+## Goals
+
+This repo generates random Red Wizards of Thay as ready-to-use D&D 5e NPCs.
+
+- **Generate wizards** with varied levels, races, schools of magic,
+  alignments and ability scores, and the stats that follow from them.
+- **Follow the 5e rules** for every derived stat: hit points, armor class,
+  proficiency, saves and skills.
+- **Show them** as JSON and as an HTML stat block.
+- **Not here:** other factions or general-purpose NPC generators.
+
 ## Features
 
 - Generates random Red Wizard characters with varying levels, races, living status, schools of magic, alignments, and ability scores.
